@@ -1,3 +1,3 @@
 # Bullets
 
-Gra tworzona dla bekis 
+Gra tworzona dla beki
