@@ -1,5 +1,18 @@
-[gd_scene format=3 uid="uid://cuaumpnewltih"]
+[gd_scene load_steps=3 format=3 uid="uid://cuaumpnewltih"]
+
+[ext_resource type="Texture2D" uid="uid://dn14qjhwnlu00" path="res://tutorialowa/mapa/Jungle Asset Pack/parallax background/plx-1.png" id="1_hvx42"]
+[ext_resource type="Texture2D" uid="uid://dbma10hiyqo3q" path="res://tutorialowa/mapa/Jungle Asset Pack/parallax background/plx-2.png" id="2_ptro0"]
 
 [node name="BG" type="ParallaxBackground"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3, 3)
+texture = ExtResource("1_hvx42")
+centered = false
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
+scale = Vector2(3, 3)
+texture = ExtResource("2_ptro0")
+centered = false
