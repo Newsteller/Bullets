@@ -1,4 +1,4 @@
-extends Area2D
+extends Node2D
 
 const BULLET = preload("res://weapons/pistol/pistol_bullet.tscn")
 
@@ -17,7 +17,7 @@ func shoot() -> void:
 		%Shoot.play()
 		var new_bullet = BULLET.instantiate()
 		new_bullet.global_position = %ShootingPoint.global_position
-		new_bullet.global_rotation = %ShootingPoint.global_rotation
+		new_bullet.linear_velocity = Vector2(700.0, 0).rotated(global_rotation)
 		%ShootingPoint.add_child(new_bullet)
 
 

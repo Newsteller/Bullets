@@ -22,7 +22,6 @@ func _on_player_health_depleted() -> void:
 	if isGameOverSoundPlaying == false:
 		%GameOverSound.play()
 		isGameOverSoundPlaying = true
-	
 
 
 func _on_restart_button_pressed() -> void:

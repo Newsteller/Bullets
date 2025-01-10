@@ -48,6 +48,10 @@ shoot={
 2d_physics/layer_1="Environment"
 2d_physics/layer_2="Enemies"
 
+[physics]
+
+common/physics_ticks_per_second=120
+
 [rendering]
 
 renderer/rendering_method="mobile"

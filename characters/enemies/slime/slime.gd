@@ -12,10 +12,15 @@ var health = 3.0
 func _ready() -> void:
 	$Slime.play_walk()
 
-func _physics_process(_delta: float) -> void:
+func _physics_process(delta: float) -> void:
+	
+	# Add the gravity.
+	if not is_on_floor():
+		velocity += get_gravity() * delta
 
 	var direction = global_position.direction_to(player.global_position)
-	velocity = direction * SPEED
+	
+	velocity.x = direction.x * SPEED
 
 	move_and_slide()
 

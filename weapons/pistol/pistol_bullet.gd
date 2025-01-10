@@ -1,21 +1,19 @@
-extends Area2D
+extends RigidBody2D
 
-const SPEED = 750.0
-const RANGE = 1000.0
+@export var speed = 750.0
+@export var range = 1000.0
 
 var travelled_distance = 0
 
-func _physics_process(delta: float) -> void:
-	var direction = Vector2.RIGHT.rotated(rotation)
-	position += direction * SPEED * delta
-	
-	travelled_distance += SPEED * delta
 
-	if travelled_distance > RANGE:
-		queue_free()
+func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
+	%Projectile.set_rotation(state.linear_velocity.angle())
+	travelled_distance += speed * state.step
 
 
 func _on_body_entered(body: Node2D) -> void:
 	queue_free()
 	if body.has_method("take_damage"):
 		body.take_damage()
+	
+ 

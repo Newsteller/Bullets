@@ -55,6 +55,9 @@ position = Vector2(-3.0001, -44)
 rotation = 3.14159
 shape = SubResource("RectangleShape2D_skn44")
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-1, 0)
+
 [node name="Gun" parent="." instance=ExtResource("3_fcct3")]
 position = Vector2(-3, -31)
 
