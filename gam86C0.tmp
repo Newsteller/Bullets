@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://dvbkmbdwmsfno"]
+
+[ext_resource type="PackedScene" uid="uid://bo72gujdxudso" path="res://player.tscn" id="1_us4qb"]
+[ext_resource type="PackedScene" uid="uid://eve76bmr4aav" path="res://tree.tscn" id="2_861hj"]
+[ext_resource type="PackedScene" uid="uid://e8qihsmoanqs" path="res://enemy_slime.tscn" id="3_61m4l"]
+
+[node name="Game" type="Node2D"]
+y_sort_enabled = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1186.0
+offset_bottom = 667.0
+
+[node name="Player" parent="." instance=ExtResource("1_us4qb")]
+position = Vector2(542, 424)
+
+[node name="Tree" parent="." instance=ExtResource("2_861hj")]
+position = Vector2(225, 179)
+
+[node name="Tree2" parent="." instance=ExtResource("2_861hj")]
+position = Vector2(931, 323)
+
+[node name="Tree3" parent="." instance=ExtResource("2_861hj")]
+position = Vector2(536, 584)
+
+[node name="EnemySlime" parent="." instance=ExtResource("3_61m4l")]
+position = Vector2(479, 175)
