@@ -4,7 +4,7 @@ signal health_depleted
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
-const DAMAGE_TAKEN_RATE = 10.0
+const DAMAGE_TAKEN_RATE = 25.0
 
 var health = 100.0
 var disabled = false

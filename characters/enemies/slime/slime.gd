@@ -12,7 +12,7 @@ var health = 3.0
 func _ready() -> void:
 	$Slime.play_walk()
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 
 	var direction = global_position.direction_to(player.global_position)
 	velocity = direction * SPEED

@@ -23,3 +23,11 @@ func _on_player_health_depleted() -> void:
 		%GameOverSound.play()
 		isGameOverSoundPlaying = true
 	
+
+
+func _on_restart_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/main_game/main_game.tscn")
+
+
+func _on_quit_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/main_menu/main_menu.tscn")
