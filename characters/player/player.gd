@@ -28,10 +28,10 @@ func _physics_process(delta: float) -> void:
 	if !disabled:
 		move_and_slide()
 	
-	if velocity.length() > 0.0:
-		%PlayerBody.play_walk_animation()
-	else:
-		%PlayerBody.play_idle_animation()
+	#if velocity.length() > 0.0:
+		#%PlayerBody.play_walk_animation()
+	#else:
+		#%PlayerBody.play_idle_animation()
 	
 	var overlapping_mobs_count = %HurtBox.get_overlapping_bodies().size()
 	if overlapping_mobs_count > 0:

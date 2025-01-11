@@ -63,22 +63,22 @@ offset = Vector2(2, 39)
 
 [node name="RightLeg" type="Sprite2D" parent="Character/Body"]
 position = Vector2(27, -4)
-rotation = -0.0439345
+rotation = -0.0439335
 scale = Vector2(1, 0.575)
 texture = ExtResource("6_wptl8")
 offset = Vector2(2, 39)
 
 [node name="RightKnee" type="Sprite2D" parent="Character/Body"]
-position = Vector2(28.8444, 37.9596)
-rotation = -0.0439244
-scale = Vector2(1, 0.375001)
+position = Vector2(28.8444, 37.9592)
+rotation = -0.0439235
+scale = Vector2(0.999995, 0.374998)
 texture = ExtResource("6_wptl8")
 offset = Vector2(2.01877, 38.8873)
 
 [node name="RightFoot" type="Sprite2D" parent="Character/Body"]
-position = Vector2(30.2935, 70.928)
-rotation = -1.56894
-scale = Vector2(0.999973, 0.149996)
+position = Vector2(30.2935, 70.9272)
+rotation = -1.56892
+scale = Vector2(0.999968, 0.149995)
 texture = ExtResource("6_wptl8")
 offset = Vector2(2, 39)
 
@@ -105,20 +105,20 @@ offset = Vector2(2.00314, 38.9968)
 
 [node name="LeftArm" type="Sprite2D" parent="Character/Body"]
 position = Vector2(-40, -48)
-rotation = -2.99122
+rotation = -2.99123
 scale = Vector2(0.999971, 0.499985)
 texture = ExtResource("6_wptl8")
 offset = Vector2(1.74992, -38.75)
 
 [node name="LeftElbow" type="Sprite2D" parent="Character/Body"]
-position = Vector2(-46.2916, -6.47515)
-rotation = -2.99122
+position = Vector2(-46.2916, -6.47517)
+rotation = -2.99123
 scale = Vector2(0.99997, 0.449987)
 texture = ExtResource("6_wptl8")
 offset = Vector2(1.74992, -38.75)
 
 [node name="LeftHand" type="Sprite2D" parent="Character/Body"]
-position = Vector2(-51.2351, 26.1516)
+position = Vector2(-51.2351, 26.1515)
 rotation = -3.13504
 scale = Vector2(0.999971, 0.149996)
 texture = ExtResource("6_wptl8")
@@ -165,7 +165,6 @@ rest = Transform2D(1, 0, 0, 1, 0, 0)
 [node name="RightLeg" type="Bone2D" parent="Character/Bones/Skeleton2D/Hip"]
 position = Vector2(27, -4)
 rotation = -1.61472
-scale = Vector2(1, 1)
 rest = Transform2D(-0.043914, -0.999035, 0.999035, -0.043914, 27, -4)
 metadata/_local_pose_override_enabled_ = true
 
