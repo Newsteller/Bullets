@@ -1,0 +1,24 @@
+[gd_resource type="SkeletonModification2DCCDIK" format=3 uid="uid://dknqies28mrhn"]
+
+[resource]
+target_nodepath = NodePath("../../IKTargets/LeftFoot")
+tip_nodepath = NodePath("Hip/LeftLeg/LeftKnee/LeftFoot")
+ccdik_data_chain_length = 2
+joint_data/0/bone_index = 4
+joint_data/0/bone2d_node = NodePath("Hip/LeftLeg")
+joint_data/0/rotate_from_joint = false
+joint_data/0/enable_constraint = true
+joint_data/0/constraint_angle_min = 50.0
+joint_data/0/constraint_angle_max = 210.0
+joint_data/0/constraint_angle_invert = true
+joint_data/0/constraint_in_localspace = true
+joint_data/0/editor_draw_gizmo = true
+joint_data/1/bone_index = 5
+joint_data/1/bone2d_node = NodePath("Hip/LeftLeg/LeftKnee")
+joint_data/1/rotate_from_joint = false
+joint_data/1/enable_constraint = true
+joint_data/1/constraint_angle_min = 0.0
+joint_data/1/constraint_angle_max = -145.0
+joint_data/1/constraint_angle_invert = true
+joint_data/1/constraint_in_localspace = true
+joint_data/1/editor_draw_gizmo = true

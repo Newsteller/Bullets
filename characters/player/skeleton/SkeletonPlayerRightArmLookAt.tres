@@ -1,0 +1,11 @@
+[gd_resource type="SkeletonModification2DLookAt" format=3 uid="uid://gqhqwrm06qxa"]
+
+[resource]
+bone_index = 12
+bone2d_node = NodePath("Hip/RightArm/RightElbow/RightHand")
+target_nodepath = NodePath("../../IKTargets/RightHand/RightHandLookAt")
+enable_constraint = true
+constraint_angle_min = -250.0
+constraint_angle_max = 250.0
+constraint_angle_invert = false
+constraint_in_localspace = true
