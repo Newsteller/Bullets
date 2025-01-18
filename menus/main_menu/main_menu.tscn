@@ -22,9 +22,22 @@ script = ExtResource("1_eb41o")
 
 [node name="Background" type="TextureRect" parent="."]
 unique_name_in_owner = true
+<<<<<<< Updated upstream
 layout_mode = 0
 offset_right = 256.0
 offset_bottom = 1.0
+=======
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 2.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+>>>>>>> Stashed changes
 texture = SubResource("GradientTexture1D_2s1si")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
