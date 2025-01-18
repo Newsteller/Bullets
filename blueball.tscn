@@ -36,7 +36,6 @@ joint_two_bone_idx = 8
 joint_two_bone2d_node = NodePath("baza/stopa2/stopa2")
 
 [sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_0ktqg"]
-enabled = true
 modification_count = 4
 modifications/0 = SubResource("SkeletonModification2DTwoBoneIK_flohw")
 modifications/1 = SubResource("SkeletonModification2DTwoBoneIK_5qgbf")
@@ -56,27 +55,27 @@ position = Vector2(0, -7)
 texture = ExtResource("2_hq6hq")
 
 [node name="stopa" type="Sprite2D" parent="tors/twarz"]
-position = Vector2(-18.3363, 62.3421)
-rotation = 2.38637
+position = Vector2(-24.3279, 59.2176)
+rotation = 2.35007
 scale = Vector2(0.402093, 0.402093)
 texture = ExtResource("3_ed2ro")
 
 [node name="stopa2" type="Sprite2D" parent="tors/twarz"]
-position = Vector2(14.4723, 61.3671)
-rotation = 2.38995
-scale = Vector2(0.407398, 0.407398)
+position = Vector2(25, 60)
+rotation = 2.37248
+scale = Vector2(0.40742, 0.40742)
 texture = ExtResource("3_ed2ro")
 
 [node name="Rynka" type="Sprite2D" parent="tors/twarz"]
-position = Vector2(61.6285, 23.3711)
-rotation = 1.91112
-scale = Vector2(0.99998, 0.99998)
+position = Vector2(61, 28)
+rotation = 2.26597
+scale = Vector2(1.00001, 1.00001)
 texture = ExtResource("4_hge76")
 
 [node name="Rynka2" type="Sprite2D" parent="tors/twarz"]
-position = Vector2(-62.1893, 15.1804)
-rotation = -1.19122
-scale = Vector2(1.00004, 1.00004)
+position = Vector2(-61.6463, 26.3178)
+rotation = -1.92207
+scale = Vector2(1.00008, 1.00008)
 texture = ExtResource("4_hge76")
 flip_h = true
 
@@ -92,14 +91,12 @@ position = Vector2(31, -11)
 rotation = -0.0620948
 scale = Vector2(0.999985, 0.999985)
 rest = Transform2D(0.998057, -0.0620539, 0.0620539, 0.998057, 31, -11)
-metadata/_local_pose_override_enabled_ = true
 
 [node name="rynka" type="Bone2D" parent="tors/Skeleton2D/baza/rynka"]
 position = Vector2(13.5388, 7.8554)
 rotation = 0.424466
 scale = Vector2(0.999997, 0.999997)
 rest = Transform2D(0.911256, 0.411833, -0.411833, 0.911256, 13.5388, 7.8554)
-metadata/_local_pose_override_enabled_ = true
 
 [node name="RemoteTransform2D2" type="RemoteTransform2D" parent="tors/Skeleton2D/baza/rynka/rynka"]
 position = Vector2(16.1531, 0.292974)
@@ -112,13 +109,11 @@ position = Vector2(-34, -14)
 rotation = 0.125867
 scale = Vector2(0.999995, 0.999995)
 rest = Transform2D(0.992084, 0.125534, -0.125534, 0.992084, -34, -14)
-metadata/_local_pose_override_enabled_ = true
 
 [node name="rynka2" type="Bone2D" parent="tors/Skeleton2D/baza/rynka2"]
 position = Vector2(-14.6182, 11.9295)
 scale = Vector2(0.999999, 0.999999)
 rest = Transform2D(0.999999, 2.38418e-07, -2.38418e-07, 0.999999, -14.6182, 11.9295)
-metadata/_local_pose_override_enabled_ = true
 
 [node name="RemoteTransform2D4" type="RemoteTransform2D" parent="tors/Skeleton2D/baza/rynka2/rynka2"]
 position = Vector2(-12.0043, 5.87125)
@@ -131,14 +126,12 @@ position = Vector2(-18, 9)
 rotation = 2.39189
 scale = Vector2(0.994028, 0.994028)
 rest = Transform2D(-0.727523, 0.677349, -0.677349, -0.727523, -18, 9)
-metadata/_local_pose_override_enabled_ = true
 
 [node name="stopa" type="Bone2D" parent="tors/Skeleton2D/baza/stopa"]
 position = Vector2(9.95898, 0.00650978)
 rotation = -0.794981
 scale = Vector2(1.00601, 1.00601)
 rest = Transform2D(0.704506, -0.71814, 0.71814, 0.704506, 9.95898, 0.00650978)
-metadata/_local_pose_override_enabled_ = true
 
 [node name="RemoteTransform2D6" type="RemoteTransform2D" parent="tors/Skeleton2D/baza/stopa/stopa"]
 position = Vector2(17.4727, -0.378333)
@@ -150,14 +143,12 @@ remote_path = NodePath("../../../../../twarz/stopa")
 position = Vector2(18, 12)
 rotation = 0.448755
 rest = Transform2D(0.900988, 0.433844, -0.433844, 0.900988, 18, 12)
-metadata/_local_pose_override_enabled_ = true
 
 [node name="stopa2" type="Bone2D" parent="tors/Skeleton2D/baza/stopa2"]
 position = Vector2(8.96567, 4.19723)
 rotation = 1.08497
 scale = Vector2(0.999992, 0.999992)
 rest = Transform2D(0.466936, 0.884282, -0.884282, 0.466936, 8.96567, 4.19723)
-metadata/_local_pose_override_enabled_ = true
 
 [node name="RemoteTransform2D8" type="RemoteTransform2D" parent="tors/Skeleton2D/baza/stopa2/stopa2"]
 position = Vector2(14.3094, 0.787916)
@@ -173,10 +164,10 @@ rotation = 0.806074
 position = Vector2(-32, 2)
 
 [node name="Targetstopa" type="Node2D" parent="tors"]
-position = Vector2(-19, 60)
+position = Vector2(-18, 64)
 
 [node name="Targetstopa2" type="Node2D" parent="tors"]
-position = Vector2(20, 82)
+position = Vector2(39, 70)
 rotation = 0.529362
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
