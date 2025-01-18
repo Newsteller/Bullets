@@ -1,20 +1,23 @@
-extends Node
 class_name Game
+extends Node
+
+@onready var ui: CanvasLayer = %UI
+@onready var loading_label: Label = $UI/Multiplayer/VBoxContainer/LoadingLabel
 
 const PLAYER = preload("res://characters/player/player.tscn")
-@onready var ui: CanvasLayer = %UI
 
 var peer = ENetMultiplayerPeer.new()
-
 var players: Array[Player] = []
 
 func _ready():
 	$MultiplayerSpawner.spawn_function = add_player
+	
+	await  Multiplayer.noray_connected
+	loading_label.text = Noray.oid
 
 func _on_host_pressed() -> void:
-	peer.create_server(25625)
-	multiplayer.multiplayer_peer = peer
-	
+	Multiplayer.host()
+
 	multiplayer.peer_connected.connect(
 		func(pid):
 			print("Peer: " + str(pid) + " has joined!")
@@ -26,8 +29,7 @@ func _on_host_pressed() -> void:
 
 
 func _on_join_pressed() -> void:
-	peer.create_client("localhost", 25625)
-	multiplayer.multiplayer_peer = peer
+	Multiplayer.join(loading_label.text)
 	%UI.hide()
 
 
@@ -40,3 +42,7 @@ func add_player(pid):
 
 func get_random_spawnpoint():
 	return $Level.get_children().pick_random().global_position
+
+
+func _on_copy_id_button_pressed() -> void:
+	DisplayServer.clipboard_set(Noray.oid)

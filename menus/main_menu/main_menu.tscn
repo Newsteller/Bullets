@@ -40,7 +40,6 @@ offset_right = 35.0
 offset_bottom = 51.0
 grow_horizontal = 2
 grow_vertical = 2
-pivot_offset = Vector2(35, 51)
 alignment = 1
 
 [node name="Logo" type="Sprite2D" parent="VBoxContainer"]
@@ -49,6 +48,18 @@ scale = Vector2(2, 2)
 texture = ExtResource("2_qhqw7")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="CopyIDButton" type="Button" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Copy session ID"
+
+[node name="IDButton" type="LineEdit" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+placeholder_text = "Session ID"
+alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/VBoxContainer"]
 layout_mode = 2
 
 [node name="PlayButton" parent="VBoxContainer/VBoxContainer" instance=ExtResource("3_25lqj")]
@@ -62,6 +73,11 @@ text = "Options"
 [node name="QuitButton" parent="VBoxContainer/VBoxContainer" instance=ExtResource("3_25lqj")]
 layout_mode = 2
 text = "Quit"
+
+[node name="LoadingLabel" type="Label" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Loading..."
+horizontal_alignment = 1
 
 [connection signal="pressed" from="VBoxContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
