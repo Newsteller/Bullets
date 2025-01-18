@@ -15,12 +15,6 @@ run/main_scene="res://menus/main_menu/main_menu.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://bullets.png"
 
-[autoload]
-
-Multiplayer="*res://scripts/multiplayer.gd"
-Noray="*res://addons/netfox.noray/noray.gd"
-PacketHandshake="*res://addons/netfox.noray/packet-handshake.gd"
-
 [display]
 
 window/size/viewport_width=1920
