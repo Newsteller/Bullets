@@ -1,9 +1,16 @@
-[gd_scene load_steps=11 format=3 uid="uid://co5tb11vuu47g"]
+[gd_scene load_steps=11 format=3 uid="uid://0xaq7lriciey"]
 
-[ext_resource type="Texture2D" uid="uid://cpxpv2mgwvsal" path="res://characters/kenney_shape-characters/PNG/Default/blue_body_circle.png" id="1_le0r5"]
-[ext_resource type="Texture2D" uid="uid://dxfn5mycwansv" path="res://characters/kenney_shape-characters/PNG/Default/face_h.png" id="2_hq6hq"]
-[ext_resource type="Texture2D" uid="uid://ddycgvvfi4l6e" path="res://characters/kenney_shape-characters/PNG/Default/tile_ramp_right.png" id="3_ed2ro"]
-[ext_resource type="Texture2D" uid="uid://de3vnrr87m3x3" path="res://characters/kenney_shape-characters/PNG/Default/red_hand_open.png" id="4_hge76"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kbouq"]
+load_path = "res://.godot/imported/blue_body_circle.png-4b764a2988f1057826e22ad20ceabdf0.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_k2m6d"]
+load_path = "res://.godot/imported/face_h.png-9d1e8fffd7200bef225bd67d65e52aac.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vj1wh"]
+load_path = "res://.godot/imported/tile_ramp_right.png-fb5e40a268ed5ac850fcaa30c7ec8b1a.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_40fyn"]
+load_path = "res://.godot/imported/red_hand_open.png-39bbc1a211ffd592e2953735d7759a01.ctex"
 
 [sub_resource type="SkeletonModification2DTwoBoneIK" id="SkeletonModification2DTwoBoneIK_flohw"]
 target_nodepath = NodePath("../Targetrynka")
@@ -48,35 +55,35 @@ radius = 43.0465
 [node name="BlueBall" type="CharacterBody2D"]
 
 [node name="tors" type="Sprite2D" parent="."]
-texture = ExtResource("1_le0r5")
+texture = SubResource("CompressedTexture2D_kbouq")
 
 [node name="twarz" type="Sprite2D" parent="tors"]
 position = Vector2(0, -7)
-texture = ExtResource("2_hq6hq")
+texture = SubResource("CompressedTexture2D_k2m6d")
 
 [node name="stopa" type="Sprite2D" parent="tors/twarz"]
-position = Vector2(-24.3279, 59.2176)
-rotation = 2.35007
+position = Vector2(-24.3278, 59.2177)
+rotation = 2.35006
 scale = Vector2(0.402093, 0.402093)
-texture = ExtResource("3_ed2ro")
+texture = SubResource("CompressedTexture2D_vj1wh")
 
 [node name="stopa2" type="Sprite2D" parent="tors/twarz"]
 position = Vector2(25, 60)
 rotation = 2.37248
 scale = Vector2(0.40742, 0.40742)
-texture = ExtResource("3_ed2ro")
+texture = SubResource("CompressedTexture2D_vj1wh")
 
 [node name="Rynka" type="Sprite2D" parent="tors/twarz"]
-position = Vector2(61, 28)
+position = Vector2(60.9999, 28)
 rotation = 2.26597
 scale = Vector2(1.00001, 1.00001)
-texture = ExtResource("4_hge76")
+texture = SubResource("CompressedTexture2D_40fyn")
 
 [node name="Rynka2" type="Sprite2D" parent="tors/twarz"]
-position = Vector2(-61.6463, 26.3178)
-rotation = -1.92207
+position = Vector2(-61.6464, 26.3178)
+rotation = -1.92206
 scale = Vector2(1.00008, 1.00008)
-texture = ExtResource("4_hge76")
+texture = SubResource("CompressedTexture2D_40fyn")
 flip_h = true
 
 [node name="Skeleton2D" type="Skeleton2D" parent="tors"]

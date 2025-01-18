@@ -1,6 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://b8n2cw6n3f01h"]
+[gd_scene load_steps=2 format=3 uid="uid://cirsmbn2n784m"]
 
-[ext_resource type="Script" path="res://movement.gd" id="1_yg5gv"]
+[sub_resource type="GDScript" id="GDScript_mwgp2"]
+script/source = "extends Node
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
 
 [node name="Movement" type="Node"]
-script = ExtResource("1_yg5gv")
+script = SubResource("GDScript_mwgp2")
