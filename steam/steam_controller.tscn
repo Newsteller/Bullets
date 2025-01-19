@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1hgw5therfrc"]
+
+[ext_resource type="Script" path="res://steam/steam_controller.gd" id="1_c1omi"]
+[ext_resource type="Texture2D" uid="uid://bsa3h8qts5ycq" path="res://bullets.png" id="2_oeg5u"]
+
+[node name="SteamController" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_c1omi")
+
+[node name="FriendCard" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 231.0
+offset_bottom = 40.0
+
+[node name="Avatar" type="TextureRect" parent="FriendCard"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_oeg5u")
+expand_mode = 2
+
+[node name="Name" type="RichTextLabel" parent="FriendCard"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Name"

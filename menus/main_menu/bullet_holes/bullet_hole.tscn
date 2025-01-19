@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://u2jhntw0s706"]
-
-[ext_resource type="Script" path="res://menus/main_menu/bullet_holes/bullet_hole.gd" id="1_iopav"]
-
-[node name="BulletHole" type="Sprite2D"]
-scale = Vector2(2, 2)
-script = ExtResource("1_iopav")

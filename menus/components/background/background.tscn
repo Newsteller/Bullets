@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxmjh46k6exms"]
+
+[ext_resource type="Script" path="res://menus/components/background/background.gd" id="1_lmgxf"]
+
+[sub_resource type="Gradient" id="Gradient_s2s44"]
+interpolation_mode = 2
+colors = PackedColorArray(0.609185, 0.338971, 0.00271515, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_scc2r"]
+gradient = SubResource("Gradient_s2s44")
+
+[node name="Background" type="Node2D"]
+script = ExtResource("1_lmgxf")
+
+[node name="Background" type="TextureRect" parent="."]
+unique_name_in_owner = true
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("GradientTexture1D_scc2r")

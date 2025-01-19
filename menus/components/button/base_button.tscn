@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cy833eh84rbmt"]
+
+[ext_resource type="Script" path="res://menus/components/button/base_button.gd" id="1_yso8o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5l1n5"]
+size = Vector2(0, 0)
+
+[node name="BaseButton" type="Button"]
+mouse_default_cursor_shape = 2
+script = ExtResource("1_yso8o")
+
+[node name="Area2D" type="Area2D" parent="."]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+unique_name_in_owner = true
+shape = SubResource("RectangleShape2D_5l1n5")

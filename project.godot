@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Bullets"
-run/main_scene="res://menus/main_menu/main_menu.tscn"
+run/main_scene="res://menus/menu/menu.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://bullets.png"
+
+[autoload]
+
+AchivementManager="res://steam/achivement_manager.gd"
 
 [display]
 
@@ -25,7 +29,7 @@ mouse_cursor/custom_image_hotspot=Vector2(16, 16)
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/netfox.internals/plugin.cfg", "res://addons/netfox.noray/plugin.cfg")
+enabled=PackedStringArray()
 
 [input]
 

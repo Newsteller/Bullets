@@ -1,0 +1,52 @@
+[gd_scene load_steps=4 format=3 uid="uid://bjv6d4mcwurqe"]
+
+[ext_resource type="Script" path="res://menus/title/title.gd" id="1_3qow2"]
+[ext_resource type="Texture2D" uid="uid://divk5fcjpqseo" path="res://menus/title/bullets.png" id="1_hhpip"]
+[ext_resource type="PackedScene" uid="uid://cy833eh84rbmt" path="res://menus/components/button/base_button.tscn" id="2_8fd0l"]
+
+[node name="Title" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_3qow2")
+
+[node name="TitleContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 905.0
+offset_top = 470.0
+offset_right = 975.0
+offset_bottom = 571.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Logo" type="Sprite2D" parent="TitleContainer"]
+position = Vector2(35, -117)
+scale = Vector2(2, 2)
+texture = ExtResource("1_hhpip")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TitleContainer"]
+layout_mode = 2
+
+[node name="PlayButton" parent="TitleContainer/VBoxContainer" instance=ExtResource("2_8fd0l")]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Play"
+
+[node name="OptionsButton" parent="TitleContainer/VBoxContainer" instance=ExtResource("2_8fd0l")]
+layout_mode = 2
+text = "Options"
+
+[node name="QuitButton" parent="TitleContainer/VBoxContainer" instance=ExtResource("2_8fd0l")]
+layout_mode = 2
+text = "Quit"
+
+[connection signal="pressed" from="TitleContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="TitleContainer/VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="TitleContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

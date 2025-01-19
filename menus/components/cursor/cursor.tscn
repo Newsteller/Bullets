@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwft046c2b6sb"]
+
+[ext_resource type="Script" path="res://menus/components/cursor/cursor.gd" id="1_vo3a0"]
+
+[node name="Cursor" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vo3a0")
