@@ -20,8 +20,7 @@ unique_name_in_owner = true
 [node name="Title" parent="." instance=ExtResource("2_6ih4a")]
 
 [node name="Settings" parent="." instance=ExtResource("3_cs61i")]
-visible = false
 
-[connection signal="options_button_pressed" from="Title" to="." method="_on_title_options_button_pressed"]
 [connection signal="play_button_pressed" from="Title" to="." method="_on_title_play_button_pressed"]
 [connection signal="quit_button_pressed" from="Title" to="." method="_on_title_quit_button_pressed"]
+[connection signal="settings_button_pressed" from="Title" to="." method="_on_title_settings_button_pressed"]

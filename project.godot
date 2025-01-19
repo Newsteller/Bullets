@@ -13,11 +13,12 @@ config_version=5
 config/name="Bullets"
 run/main_scene="res://menus/menu/menu.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
-config/icon="res://bullets.png"
+config/icon="res://icon.png"
 
 [autoload]
 
-AchivementManager="res://steam/achivement_manager.gd"
+ConfigFileHandler="*res://singletons/config_file_handler.gd"
+SceneSwitcher="*res://singletons/scene_switcher.gd"
 
 [display]
 

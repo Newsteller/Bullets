@@ -1,3 +1,30 @@
-[gd_resource type="Theme" format=3 uid="uid://cke8cd6ke8l80"]
+[gd_resource type="Theme" load_steps=12 format=3 uid="uid://cke8cd6ke8l80"]
+
+[ext_resource type="FontFile" uid="uid://ccab1rn6kopgv" path="res://themes/Kenney Future Narrow.ttf" id="1_hyipl"]
+[ext_resource type="Texture2D" uid="uid://dk3fqcuybhmls" path="res://menus/components/icons/assets/check_square_grey_checkmark.png" id="2_wvw1o"]
+[ext_resource type="Texture2D" uid="uid://bah414k67sby5" path="res://menus/components/icons/assets/check_round_grey_circle.png" id="3_wogmj"]
+[ext_resource type="Texture2D" uid="uid://bfs0imtjck5iw" path="res://menus/components/icons/assets/check_round_grey.png" id="4_5n6is"]
+[ext_resource type="Texture2D" uid="uid://jangatn3y5hy" path="res://menus/components/icons/assets/check_square_grey.png" id="5_jh6jg"]
+[ext_resource type="Texture2D" uid="uid://bbc6r351r6nmq" path="res://menus/components/icons/assets/icon_circle.png" id="6_b43sd"]
+[ext_resource type="Texture2D" uid="uid://bjk5u32ur1qbc" path="res://menus/components/icons/assets/icon_outline_circle.png" id="7_04m3w"]
+[ext_resource type="Texture2D" uid="uid://bo3vtghrsq8ph" path="res://themes/icons/check_square_grey_checkmark.png" id="8_5kbpr"]
+[ext_resource type="Texture2D" uid="uid://dvwimbnfr53yc" path="res://themes/icons/check_round_grey_circle.png" id="9_4d7xb"]
+[ext_resource type="Texture2D" uid="uid://dtcjjrtdhtgt8" path="res://themes/icons/check_round_grey.png" id="10_qjkxl"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_fhf2q"]
+color = Color(0.717162, 0.594107, 0.377952, 1)
+thickness = 8
 
 [resource]
+CheckBox/fonts/font = ExtResource("1_hyipl")
+CheckBox/icons/checked = ExtResource("2_wvw1o")
+CheckBox/icons/radio_checked = ExtResource("3_wogmj")
+CheckBox/icons/radio_unchecked = ExtResource("4_5n6is")
+CheckBox/icons/unchecked = ExtResource("5_jh6jg")
+HSlider/icons/grabber = ExtResource("6_b43sd")
+HSlider/icons/grabber_highlight = ExtResource("7_04m3w")
+HSlider/styles/slider = SubResource("StyleBoxLine_fhf2q")
+PopupMenu/fonts/font = ExtResource("1_hyipl")
+PopupMenu/icons/checked = ExtResource("8_5kbpr")
+PopupMenu/icons/radio_checked = ExtResource("9_4d7xb")
+PopupMenu/icons/radio_unchecked = ExtResource("10_qjkxl")

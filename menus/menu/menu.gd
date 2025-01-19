@@ -14,9 +14,9 @@ func _on_title_play_button_pressed() -> void:
 	pass
 
 
-func _on_title_options_button_pressed() -> void:
-	pass
-
-
 func _on_title_quit_button_pressed() -> void:
 	get_tree().quit()
+
+
+func _on_title_settings_button_pressed() -> void:
+	pass # Replace with function body.

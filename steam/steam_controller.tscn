@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://d1hgw5therfrc"]
 
 [ext_resource type="Script" path="res://steam/steam_controller.gd" id="1_c1omi"]
-[ext_resource type="Texture2D" uid="uid://bsa3h8qts5ycq" path="res://bullets.png" id="2_oeg5u"]
+[ext_resource type="Texture2D" uid="uid://bsa3h8qts5ycq" path="res://icon.png" id="2_oeg5u"]
 
 [node name="SteamController" type="Control"]
 layout_mode = 3
