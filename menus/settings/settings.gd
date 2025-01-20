@@ -37,6 +37,13 @@ func _on_resolution_button_item_selected(index: int) -> void:
 
 
 func _on_fullscreen_check_box_toggled(toggled_on: bool) -> void:
+	if toggled_on:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+		
+	else:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+		
+	%ResolutionButton.disabled = toggled_on
 	ConfigFileHandler.save_video_settings("fullscreen", toggled_on)
 
 

@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=31 format=3 uid="uid://dp5xim38i7y6m"]
+[gd_resource type="Theme" load_steps=45 format=3 uid="uid://dp5xim38i7y6m"]
 
 [ext_resource type="StyleBox" uid="uid://cglre61f6cp6f" path="res://themes/icons/textures/tab_background_texture.tres" id="1_6t0uu"]
 [ext_resource type="FontFile" uid="uid://d0clm05x4hgq" path="res://themes/fonts/Kenney Future.ttf" id="1_qglab"]
@@ -17,6 +17,10 @@
 [ext_resource type="Texture2D" uid="uid://cmiwixlg1ikuw" path="res://themes/icons/images/check_button_unchecked.png" id="10_bs66c"]
 [ext_resource type="Texture2D" uid="uid://c82swqlfyyqn0" path="res://themes/icons/images/icon_cross.png" id="11_wm5yf"]
 [ext_resource type="StyleBox" uid="uid://bjfuo1ayrlntf" path="res://themes/icons/textures/line_edit.tres" id="12_sepmh"]
+[ext_resource type="Texture2D" uid="uid://br7eedn7ojcp2" path="res://themes/icons/new/menu_pressed_without_bottom.png" id="16_2avag"]
+[ext_resource type="Texture2D" uid="uid://f58fynmul3pk" path="res://themes/icons/images/button_square_depth_flat.png" id="16_46edn"]
+[ext_resource type="Texture2D" uid="uid://yw4f6fpgja7m" path="res://themes/icons/new/button_without_top.png" id="18_nssvn"]
+[ext_resource type="Texture2D" uid="uid://bkclodln2u8jr" path="res://themes/icons/images/divider_edges.png" id="18_v1tng"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iayfm"]
 
@@ -58,7 +62,51 @@ image = SubResource("Image_n7qr6")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mgf5f"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_p3nsb"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_o1q7x"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_noqwq"]
+texture = ExtResource("16_2avag")
+texture_margin_left = 14.0
+texture_margin_top = 22.0
+texture_margin_right = 14.0
+texture_margin_bottom = 14.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8fapq"]
+texture = ExtResource("16_46edn")
+texture_margin_left = 14.0
+texture_margin_top = 14.0
+texture_margin_right = 14.0
+texture_margin_bottom = 22.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rqmmm"]
+texture = ExtResource("16_46edn")
+texture_margin_left = 14.0
+texture_margin_top = 14.0
+texture_margin_right = 14.0
+texture_margin_bottom = 22.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0kwqc"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_krafa"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2p6wh"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0alem"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4qlcs"]
+texture = ExtResource("18_nssvn")
+texture_margin_left = 14.0
+texture_margin_right = 14.0
+texture_margin_bottom = 14.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p21ba"]
+texture = ExtResource("18_v1tng")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_homjk"]
 
 [resource]
 Button/colors/font_disabled_color = Color(0.596078, 0.603922, 0.686275, 1)
@@ -71,6 +119,7 @@ Button/styles/focus = SubResource("StyleBoxEmpty_iayfm")
 Button/styles/hover = ExtResource("2_o4ysf")
 Button/styles/normal = ExtResource("2_o4ysf")
 Button/styles/pressed = ExtResource("3_u0sir")
+CheckBox/colors/font_color = Color(0.596078, 0.603922, 0.686275, 1)
 CheckBox/constants/icon_max_width = 32
 CheckBox/fonts/font = ExtResource("1_qglab")
 CheckBox/icons/checked = ExtResource("1_rghrs")
@@ -80,6 +129,7 @@ CheckBox/icons/unchecked = ExtResource("4_fvwux")
 CheckBox/styles/hover = SubResource("StyleBoxEmpty_ucq4m")
 CheckBox/styles/normal = SubResource("StyleBoxEmpty_p2eo4")
 CheckBox/styles/pressed = SubResource("StyleBoxEmpty_b7jah")
+CheckButton/colors/font_color = Color(0.596078, 0.603922, 0.686275, 1)
 CheckButton/constants/align_to_largest_stylebox = 1
 CheckButton/constants/icon_max_width = 64
 CheckButton/fonts/font = ExtResource("1_qglab")
@@ -101,11 +151,22 @@ LineEdit/fonts/font = ExtResource("1_qglab")
 LineEdit/icons/clear = ExtResource("11_wm5yf")
 LineEdit/styles/focus = SubResource("StyleBoxEmpty_mgf5f")
 LineEdit/styles/normal = ExtResource("12_sepmh")
-OptionButton/constants/align_to_largest_stylebox = 1
 OptionButton/fonts/font = ExtResource("1_qglab")
-OptionButton/icons/arrow = SubResource("CompressedTexture2D_p3nsb")
+OptionButton/icons/arrow = SubResource("CompressedTexture2D_o1q7x")
+OptionButton/styles/pressed = SubResource("StyleBoxTexture_noqwq")
+Panel/styles/panel = SubResource("StyleBoxTexture_8fapq")
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_rqmmm")
+PopupMenu/fonts/font = ExtResource("1_qglab")
+PopupMenu/fonts/title_font = ExtResource("1_qglab")
+PopupMenu/icons/checked = SubResource("CompressedTexture2D_0kwqc")
+PopupMenu/icons/radio_checked = SubResource("CompressedTexture2D_krafa")
+PopupMenu/icons/radio_unchecked = SubResource("CompressedTexture2D_2p6wh")
+PopupMenu/icons/unchecked = SubResource("CompressedTexture2D_0alem")
+PopupMenu/styles/panel = SubResource("StyleBoxTexture_4qlcs")
+PopupMenu/styles/separator = SubResource("StyleBoxTexture_p21ba")
 TabContainer/fonts/font = ExtResource("1_qglab")
 TabContainer/styles/panel = ExtResource("1_6t0uu")
+TabContainer/styles/tab_focus = SubResource("StyleBoxEmpty_homjk")
 TabContainer/styles/tab_hovered = ExtResource("2_db8yj")
 TabContainer/styles/tab_selected = ExtResource("2_db8yj")
 TabContainer/styles/tab_unselected = ExtResource("2_db8yj")
