@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dk7dkq858rcif"]
+[gd_scene load_steps=7 format=3 uid="uid://dk7dkq858rcif"]
 
 [ext_resource type="Script" path="res://menus/menu/menu.gd" id="1_yerfl"]
 [ext_resource type="PackedScene" uid="uid://bjv6d4mcwurqe" path="res://menus/title/title.tscn" id="2_6ih4a"]
 [ext_resource type="PackedScene" uid="uid://cxmjh46k6exms" path="res://menus/components/background/background.tscn" id="2_pmb1h"]
 [ext_resource type="PackedScene" uid="uid://cb5o8wcppm50n" path="res://menus/settings/settings.tscn" id="3_cs61i"]
 [ext_resource type="PackedScene" uid="uid://cwft046c2b6sb" path="res://menus/components/cursor/cursor.tscn" id="3_e0h64"]
+[ext_resource type="Theme" uid="uid://dp5xim38i7y6m" path="res://themes/main_theme.tres" id="5_k2mgo"]
 
 [node name="Menu" type="Node"]
 script = ExtResource("1_yerfl")
@@ -18,8 +19,10 @@ unique_name_in_owner = true
 unique_name_in_owner = true
 
 [node name="Title" parent="." instance=ExtResource("2_6ih4a")]
+theme = ExtResource("5_k2mgo")
 
 [node name="Settings" parent="." instance=ExtResource("3_cs61i")]
+visible = false
 
 [connection signal="play_button_pressed" from="Title" to="." method="_on_title_play_button_pressed"]
 [connection signal="quit_button_pressed" from="Title" to="." method="_on_title_quit_button_pressed"]

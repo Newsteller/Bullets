@@ -1,0 +1,108 @@
+[gd_resource type="Theme" load_steps=31 format=3 uid="uid://dp5xim38i7y6m"]
+
+[ext_resource type="StyleBox" uid="uid://cglre61f6cp6f" path="res://themes/icons/textures/tab_background_texture.tres" id="1_6t0uu"]
+[ext_resource type="FontFile" uid="uid://d0clm05x4hgq" path="res://themes/fonts/Kenney Future.ttf" id="1_qglab"]
+[ext_resource type="Texture2D" uid="uid://52847fdjyyjg" path="res://themes/icons/images/check_square_grey_checkmark.png" id="1_rghrs"]
+[ext_resource type="Texture2D" uid="uid://bhc8udrro7qpd" path="res://themes/icons/images/check_round_grey_circle.png" id="2_a2j4i"]
+[ext_resource type="StyleBox" uid="uid://cyva1v4us87vc" path="res://themes/icons/textures/tab_texture.tres" id="2_db8yj"]
+[ext_resource type="StyleBox" uid="uid://dgkylrhr6okq6" path="res://themes/icons/textures/new/ButtonDisabledTexture.tres" id="2_fy4cg"]
+[ext_resource type="StyleBox" uid="uid://c2mb4ak733yfr" path="res://themes/icons/textures/new/ButtonUnpressedTexture.tres" id="2_o4ysf"]
+[ext_resource type="StyleBox" uid="uid://cjl46deldevmn" path="res://themes/icons/textures/new/ButtonPressedTexture.tres" id="3_u0sir"]
+[ext_resource type="Texture2D" uid="uid://dhrcau71wpird" path="res://themes/icons/images/check_round_grey.png" id="3_yu3x2"]
+[ext_resource type="Texture2D" uid="uid://pjlpj7a21kkm" path="res://themes/icons/images/check_square_grey.png" id="4_fvwux"]
+[ext_resource type="Texture2D" uid="uid://bg3f0rkuysljd" path="res://themes/icons/images/icon_circle.png" id="5_bqame"]
+[ext_resource type="Texture2D" uid="uid://ndcoy7082blm" path="res://themes/icons/images/icon_outline_circle.png" id="6_a044o"]
+[ext_resource type="StyleBox" uid="uid://qokr0haq87n6" path="res://themes/icons/textures/slider_line.tres" id="7_w8pw8"]
+[ext_resource type="Texture2D" uid="uid://baqxuaagvdebe" path="res://themes/icons/images/check_button_checked.png" id="9_wm81b"]
+[ext_resource type="Texture2D" uid="uid://cmiwixlg1ikuw" path="res://themes/icons/images/check_button_unchecked.png" id="10_bs66c"]
+[ext_resource type="Texture2D" uid="uid://c82swqlfyyqn0" path="res://themes/icons/images/icon_cross.png" id="11_wm5yf"]
+[ext_resource type="StyleBox" uid="uid://bjfuo1ayrlntf" path="res://themes/icons/textures/line_edit.tres" id="12_sepmh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iayfm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ucq4m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p2eo4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b7jah"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vj0mw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4thep"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wuhp0"]
+
+[sub_resource type="Image" id="Image_27377"]
+data = {
+"data": PackedByteArray(255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 9, 255, 255, 255, 49, 255, 255, 255, 77, 255, 255, 255, 90, 255, 255, 255, 90, 255, 255, 255, 77, 255, 255, 255, 49, 255, 255, 255, 9, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 32, 255, 255, 255, 90, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 90, 255, 255, 255, 31, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 32, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 31, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 9, 255, 255, 255, 90, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 89, 255, 255, 255, 8, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 49, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 48, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 77, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 77, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 90, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 90, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 90, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 89, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 77, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 76, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 49, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 48, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 9, 255, 255, 255, 90, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 89, 255, 255, 255, 8, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 31, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 30, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 31, 255, 255, 255, 89, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 89, 255, 255, 255, 30, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 8, 255, 255, 255, 48, 255, 255, 255, 77, 255, 255, 255, 90, 255, 255, 255, 89, 255, 255, 255, 76, 255, 255, 255, 48, 255, 255, 255, 8, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0),
+"format": "RGBA8",
+"height": 16,
+"mipmaps": false,
+"width": 16
+}
+
+[sub_resource type="ImageTexture" id="ImageTexture_0gjqc"]
+image = SubResource("Image_27377")
+
+[sub_resource type="Image" id="Image_n7qr6"]
+data = {
+"data": PackedByteArray(255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0),
+"format": "RGBA8",
+"height": 16,
+"mipmaps": false,
+"width": 4
+}
+
+[sub_resource type="ImageTexture" id="ImageTexture_r25yb"]
+image = SubResource("Image_n7qr6")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mgf5f"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_p3nsb"]
+
+[resource]
+Button/colors/font_pressed_color = Color(0.235294, 0.235294, 0.235294, 1)
+Button/fonts/font = ExtResource("1_qglab")
+Button/styles/disabled = ExtResource("2_fy4cg")
+Button/styles/focus = SubResource("StyleBoxEmpty_iayfm")
+Button/styles/hover = ExtResource("2_o4ysf")
+Button/styles/normal = ExtResource("2_o4ysf")
+Button/styles/pressed = ExtResource("3_u0sir")
+CheckBox/constants/icon_max_width = 32
+CheckBox/fonts/font = ExtResource("1_qglab")
+CheckBox/icons/checked = ExtResource("1_rghrs")
+CheckBox/icons/radio_checked = ExtResource("2_a2j4i")
+CheckBox/icons/radio_unchecked = ExtResource("3_yu3x2")
+CheckBox/icons/unchecked = ExtResource("4_fvwux")
+CheckBox/styles/hover = SubResource("StyleBoxEmpty_ucq4m")
+CheckBox/styles/normal = SubResource("StyleBoxEmpty_p2eo4")
+CheckBox/styles/pressed = SubResource("StyleBoxEmpty_b7jah")
+CheckButton/constants/align_to_largest_stylebox = 1
+CheckButton/constants/icon_max_width = 64
+CheckButton/fonts/font = ExtResource("1_qglab")
+CheckButton/icons/checked = ExtResource("9_wm81b")
+CheckButton/icons/unchecked = ExtResource("10_bs66c")
+CheckButton/styles/hover = SubResource("StyleBoxEmpty_vj0mw")
+CheckButton/styles/normal = SubResource("StyleBoxEmpty_4thep")
+CheckButton/styles/pressed = SubResource("StyleBoxEmpty_wuhp0")
+HSlider/constants/center_grabber = 0
+HSlider/constants/grabber_offset = 0
+HSlider/icons/grabber = ExtResource("6_a044o")
+HSlider/icons/grabber_disabled = SubResource("ImageTexture_0gjqc")
+HSlider/icons/grabber_highlight = ExtResource("5_bqame")
+HSlider/icons/tick = SubResource("ImageTexture_r25yb")
+HSlider/styles/grabber_area = ExtResource("7_w8pw8")
+HSlider/styles/grabber_area_highlight = ExtResource("7_w8pw8")
+Label/fonts/font = ExtResource("1_qglab")
+LineEdit/fonts/font = ExtResource("1_qglab")
+LineEdit/icons/clear = ExtResource("11_wm5yf")
+LineEdit/styles/focus = SubResource("StyleBoxEmpty_mgf5f")
+LineEdit/styles/normal = ExtResource("12_sepmh")
+OptionButton/constants/align_to_largest_stylebox = 1
+OptionButton/fonts/font = ExtResource("1_qglab")
+OptionButton/icons/arrow = SubResource("CompressedTexture2D_p3nsb")
+TabContainer/fonts/font = ExtResource("1_qglab")
+TabContainer/styles/panel = ExtResource("1_6t0uu")
+TabContainer/styles/tab_hovered = ExtResource("2_db8yj")
+TabContainer/styles/tab_selected = ExtResource("2_db8yj")
+TabContainer/styles/tab_unselected = ExtResource("2_db8yj")

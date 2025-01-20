@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://ceet0hcqgh2uc"]
+
+[ext_resource type="Texture2D" uid="uid://ej4wat5mcuxh" path="res://menus/components/icons/button_rectangle_line.png" id="1_yljoe"]
+
+[node name="PanelBackground" type="NinePatchRect"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_yljoe")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6

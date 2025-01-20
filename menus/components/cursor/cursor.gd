@@ -1,12 +1,8 @@
-extends Control
+extends Node2D
 
 
 const CURSOR_HAND_PRESSED := preload("res://assets/cursors/hand_pressed.png")
 const CURSOR_HAND_UNPRESSED := preload("res://assets/cursors/hand_unpressed.png")
-
-
-func _init() -> void:
-	Input.mouse_mode = Input.MOUSE_MODE_CONFINED
 
 
 func mouse_pressed() -> void:

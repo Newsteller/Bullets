@@ -17,9 +17,14 @@ position = Vector2(0, -65)
 [node name="Kontrolki" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
+offset_left = -16.0
+offset_top = 143.0
+offset_right = -16.0
+offset_bottom = 143.0
 
 [node name="ControlsContainer" type="VBoxContainer" parent="Kontrolki"]
 custom_minimum_size = Vector2(500, 0)
+layout_mode = 0
 offset_left = -241.0
 offset_top = -500.0
 offset_right = 259.0
@@ -61,6 +66,7 @@ value = 1.0
 
 [node name="PrzesunSrodekLabel" type="Label" parent="Kontrolki"]
 unique_name_in_owner = true
+layout_mode = 0
 offset_left = 346.0
 offset_top = -462.0
 offset_right = 494.0
@@ -68,6 +74,7 @@ offset_bottom = -439.0
 text = "Środek elipsy: (0, 0)"
 
 [node name="PrzesunDoGoryButton" type="TextureButton" parent="Kontrolki"]
+layout_mode = 0
 offset_left = 400.0
 offset_top = -424.0
 offset_right = 424.0
@@ -76,6 +83,7 @@ pivot_offset = Vector2(12, 12)
 texture_normal = ExtResource("2_lcxxb")
 
 [node name="PrzesunWPrawoButton" type="TextureButton" parent="Kontrolki"]
+layout_mode = 0
 offset_left = 424.0
 offset_top = -400.0
 offset_right = 448.0
@@ -84,6 +92,7 @@ pivot_offset = Vector2(12, 12)
 texture_normal = ExtResource("3_g2gbd")
 
 [node name="PrzesunDoDoluButton" type="TextureButton" parent="Kontrolki"]
+layout_mode = 0
 offset_left = 400.0
 offset_top = -376.0
 offset_right = 424.0
@@ -92,6 +101,7 @@ pivot_offset = Vector2(12, 12)
 texture_normal = ExtResource("4_xfbxj")
 
 [node name="PrzesunWLewoButton" type="TextureButton" parent="Kontrolki"]
+layout_mode = 0
 offset_left = 376.0
 offset_top = -400.0
 offset_right = 400.0
