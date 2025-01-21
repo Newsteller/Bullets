@@ -1,5 +1,7 @@
 extends Control
 
+var user_id
+var user_name
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -10,16 +12,18 @@ func _ready() -> void:
 		print("Steam is not running! Please run Steam for this interation.")
 		return
 	
-	var userId = Steam.getSteamID()
-	var name = Steam.getFriendPersonaName(userId)
-	print("Your Steam name is: ", name)
-	%Name.text = name
+	user_id = Steam.getSteamID()
+	user_name = Steam.getFriendPersonaName(user_id)
 	
-	Steam.avatar_loaded.connect(avatar_loaded)
-	Steam.getPlayerAvatar()
+	Steam.avatar_loaded.connect(_on_loaded_avatar)
+	#Steam.getPlayerAvatar()
 
 
-func avatar_loaded(id, size, buffer):
-	var avatarImage = Image.create_from_data(size, size, false, Image.FORMAT_RGBA8, buffer)
-	var texture = ImageTexture.create_from_image(avatarImage)
-	%Avatar.texture = texture
+func _process(delta: float) -> void:
+	Steam.run_callbacks()
+
+
+func _on_loaded_avatar(user_id: int, avatar_size: int, avatar_buffer: PackedByteArray) -> void:
+	var avatar_image := Image.create_from_data(avatar_size, avatar_size, false, Image.FORMAT_RGBA8, avatar_buffer)
+	var avatar_texture = ImageTexture.create_from_image(avatar_image)
+	#$sprite.set_texture(avatar_texture)
