@@ -19,7 +19,8 @@ config/icon="res://icon.png"
 
 ConfigFileHandler="*res://singletons/config_file_handler.gd"
 SceneSwitcher="*res://singletons/scene_switcher.gd"
-SteamController="*res://steam/steam_controller.gd"
+SteamController="*res://singletons/steam_controller.gd"
+SteamNetworkController="*res://singletons/steam_network_controller.gd"
 
 [display]
 

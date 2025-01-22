@@ -9,7 +9,7 @@ const BULLET = preload("res://bullet/bullet.tscn")
 
 var health = MAX_HEALTH
 
-@onready var game: Game = get_parent()
+@onready var game: GameSteam = get_parent()
 
 func _enter_tree() -> void:
 	set_multiplayer_authority(int(str(name)))

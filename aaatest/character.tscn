@@ -1,12 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://b8mhouqwo36v8"]
+[gd_scene load_steps=4 format=3 uid="uid://b8mhouqwo36v8"]
 
 [ext_resource type="Texture2D" uid="uid://butfxu5iddfbw" path="res://aaatest/asety1/PNG/Double (128px)/Characters/green_character.png" id="1_gk6mm"]
 [ext_resource type="Script" path="res://aaatest/character.gd" id="1_jklpt"]
-[ext_resource type="Texture2D" path="res://menus/components/icons/assets/arrow_basic_n_small.png" id="2_lcxxb"]
 [ext_resource type="Texture2D" uid="uid://bignoakhs5bl6" path="res://aaatest/asety1/PNG/Default (64px)/Characters/red_hand.png" id="3_bxwop"]
-[ext_resource type="Texture2D" path="res://menus/components/icons/assets/arrow_basic_e_small.png" id="3_g2gbd"]
-[ext_resource type="Texture2D" path="res://menus/components/icons/assets/arrow_basic_s_small.png" id="4_xfbxj"]
-[ext_resource type="Texture2D" path="res://menus/components/icons/assets/arrow_basic_w_small.png" id="5_y7ny0"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_jklpt")
@@ -80,7 +76,6 @@ offset_top = -424.0
 offset_right = 424.0
 offset_bottom = -400.0
 pivot_offset = Vector2(12, 12)
-texture_normal = ExtResource("2_lcxxb")
 
 [node name="PrzesunWPrawoButton" type="TextureButton" parent="Kontrolki"]
 layout_mode = 0
@@ -89,7 +84,6 @@ offset_top = -400.0
 offset_right = 448.0
 offset_bottom = -376.0
 pivot_offset = Vector2(12, 12)
-texture_normal = ExtResource("3_g2gbd")
 
 [node name="PrzesunDoDoluButton" type="TextureButton" parent="Kontrolki"]
 layout_mode = 0
@@ -98,7 +92,6 @@ offset_top = -376.0
 offset_right = 424.0
 offset_bottom = -352.0
 pivot_offset = Vector2(12, 12)
-texture_normal = ExtResource("4_xfbxj")
 
 [node name="PrzesunWLewoButton" type="TextureButton" parent="Kontrolki"]
 layout_mode = 0
@@ -107,7 +100,6 @@ offset_top = -400.0
 offset_right = 400.0
 offset_bottom = -376.0
 pivot_offset = Vector2(12, 12)
-texture_normal = ExtResource("5_y7ny0")
 
 [node name="character" type="CharacterBody2D" parent="."]
 

@@ -3,7 +3,6 @@ extends Control
 var user_id
 var user_name
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Steam.steamInit()
 	var isSteamRunning = Steam.isSteamRunning()

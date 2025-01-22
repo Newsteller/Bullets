@@ -1,4 +1,4 @@
-class_name GameSteam
+class_name Game
 extends Node
 
 @onready var ui: CanvasLayer = %UI
@@ -11,19 +11,25 @@ var players: Array[Player] = []
 
 func _ready():
 	$MultiplayerSpawner.spawn_function = add_player
-	SteamNetworkController.lobby_created_signal.connect(on_lobby_created)
 
 
 func _on_host_pressed() -> void:
-	SteamNetworkController.create_lobby()
+	peer.create_server(25565)
+	multiplayer.multiplayer_peer = peer
 
-	$MultiplayerSpawner.spawn()
+	multiplayer.peer_connected.connect(
+		func(pid):
+			print("Peer: " + str(pid) + " has joined!")
+			$MultiplayerSpawner.spawn(pid)
+	)
+	
+	$MultiplayerSpawner.spawn(multiplayer.get_unique_id())
 	%UI.hide()
 
 
 func _on_join_pressed() -> void:
-	var lobby_id: int = int(%LobbyID.text)
-	SteamNetworkController.join_lobby(lobby_id)
+	peer.create_client("localhost", 25565)
+	multiplayer.multiplayer_peer = peer
 	%UI.hide()
 
 
@@ -34,10 +40,5 @@ func add_player(pid):
 	players.append(player)
 	return player
 
-
 func get_random_spawnpoint():
 	return $Level.get_children().pick_random().global_position
-
-
-func on_lobby_created(lobby_id: int) -> void:
-	%LobbyID.text = str(lobby_id)

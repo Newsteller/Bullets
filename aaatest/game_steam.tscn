@@ -1,10 +1,10 @@
-[gd_scene load_steps=5 format=4 uid="uid://d3bq5f741qk5l"]
+[gd_scene load_steps=5 format=4 uid="uid://cglairy1vbb00"]
 
-[ext_resource type="Texture2D" uid="uid://c1hetdgqk8aia" path="res://assets/tileset.png" id="1_4ybms"]
-[ext_resource type="Script" path="res://aaatest/game.gd" id="1_ouin6"]
+[ext_resource type="Script" path="res://aaatest/game.gd" id="1_wusq0"]
+[ext_resource type="Texture2D" uid="uid://c1hetdgqk8aia" path="res://assets/tileset.png" id="2_xsq4t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7bbp5"]
-texture = ExtResource("1_4ybms")
+texture = ExtResource("2_xsq4t")
 texture_region_size = Vector2i(8, 8)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4, -4, 4, -4, 4, 4, -4, 4)
@@ -16,7 +16,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_7bbp5")
 
 [node name="Game" type="Node"]
-script = ExtResource("1_ouin6")
+script = ExtResource("1_wusq0")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(576, 326)
@@ -70,10 +70,6 @@ text = "Host"
 unique_name_in_owner = true
 layout_mode = 2
 text = "Join"
-
-[node name="LobbyID" type="LineEdit" parent="UI/Multiplayer/VBoxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
 
 [node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
 spawn_path = NodePath("..")
