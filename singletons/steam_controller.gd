@@ -1,4 +1,4 @@
-extends Control
+extends Node
 
 var user_id
 var user_name

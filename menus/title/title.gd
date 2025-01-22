@@ -1,17 +1,16 @@
 extends Control
 
-signal play_button_pressed
-signal settings_button_pressed
-signal quit_button_pressed
+
+const SETTINGS: Resource = preload("res://menus/settings/settings.tscn")
 
 
 func _on_play_button_pressed() -> void:
-	play_button_pressed.emit()
+	pass
 
 
 func _on_settings_button_pressed() -> void:
-	settings_button_pressed.emit()
+	SceneSwitcher.change_scene(self, "res://menus/settings/settings.tscn")
 
 
 func _on_quit_button_pressed() -> void:
-	quit_button_pressed.emit()
+	get_tree().quit()
