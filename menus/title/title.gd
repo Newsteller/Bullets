@@ -1,11 +1,8 @@
 extends Control
 
 
-const SETTINGS: Resource = preload("res://menus/settings/settings.tscn")
-
-
 func _on_play_button_pressed() -> void:
-	pass
+	SceneSwitcher.change_scene(self, "res://menus/lobby/lobby.tscn")
 
 
 func _on_settings_button_pressed() -> void:

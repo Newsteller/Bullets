@@ -1,26 +1,26 @@
 [gd_resource type="Theme" load_steps=45 format=3 uid="uid://dp5xim38i7y6m"]
 
-[ext_resource type="StyleBox" uid="uid://cglre61f6cp6f" path="res://themes/icons/textures/tab_background_texture.tres" id="1_6t0uu"]
-[ext_resource type="FontFile" uid="uid://d0clm05x4hgq" path="res://themes/fonts/Kenney Future.ttf" id="1_qglab"]
-[ext_resource type="Texture2D" uid="uid://52847fdjyyjg" path="res://themes/icons/images/check_square_grey_checkmark.png" id="1_rghrs"]
-[ext_resource type="Texture2D" uid="uid://bhc8udrro7qpd" path="res://themes/icons/images/check_round_grey_circle.png" id="2_a2j4i"]
-[ext_resource type="StyleBox" uid="uid://cyva1v4us87vc" path="res://themes/icons/textures/tab_texture.tres" id="2_db8yj"]
-[ext_resource type="StyleBox" uid="uid://dgkylrhr6okq6" path="res://themes/icons/textures/new/ButtonDisabledTexture.tres" id="2_fy4cg"]
-[ext_resource type="StyleBox" uid="uid://c2mb4ak733yfr" path="res://themes/icons/textures/new/ButtonUnpressedTexture.tres" id="2_o4ysf"]
-[ext_resource type="StyleBox" uid="uid://cjl46deldevmn" path="res://themes/icons/textures/new/ButtonPressedTexture.tres" id="3_u0sir"]
-[ext_resource type="Texture2D" uid="uid://dhrcau71wpird" path="res://themes/icons/images/check_round_grey.png" id="3_yu3x2"]
-[ext_resource type="Texture2D" uid="uid://pjlpj7a21kkm" path="res://themes/icons/images/check_square_grey.png" id="4_fvwux"]
-[ext_resource type="Texture2D" uid="uid://bg3f0rkuysljd" path="res://themes/icons/images/icon_circle.png" id="5_bqame"]
-[ext_resource type="Texture2D" uid="uid://ndcoy7082blm" path="res://themes/icons/images/icon_outline_circle.png" id="6_a044o"]
-[ext_resource type="StyleBox" uid="uid://qokr0haq87n6" path="res://themes/icons/textures/slider_line.tres" id="7_w8pw8"]
-[ext_resource type="Texture2D" uid="uid://baqxuaagvdebe" path="res://themes/icons/images/check_button_checked.png" id="9_wm81b"]
-[ext_resource type="Texture2D" uid="uid://cmiwixlg1ikuw" path="res://themes/icons/images/check_button_unchecked.png" id="10_bs66c"]
-[ext_resource type="Texture2D" uid="uid://c82swqlfyyqn0" path="res://themes/icons/images/icon_cross.png" id="11_wm5yf"]
-[ext_resource type="StyleBox" uid="uid://bjfuo1ayrlntf" path="res://themes/icons/textures/line_edit.tres" id="12_sepmh"]
-[ext_resource type="Texture2D" uid="uid://br7eedn7ojcp2" path="res://themes/icons/new/menu_pressed_without_bottom.png" id="16_2avag"]
-[ext_resource type="Texture2D" uid="uid://f58fynmul3pk" path="res://themes/icons/images/button_square_depth_flat.png" id="16_46edn"]
-[ext_resource type="Texture2D" uid="uid://yw4f6fpgja7m" path="res://themes/icons/new/button_without_top.png" id="18_nssvn"]
-[ext_resource type="Texture2D" uid="uid://bkclodln2u8jr" path="res://themes/icons/images/divider_edges.png" id="18_v1tng"]
+[ext_resource type="StyleBox" uid="uid://dgkylrhr6okq6" path="res://themes/icons/textures/new/ButtonDisabledTexture.tres" id="1_siy7r"]
+[ext_resource type="StyleBox" uid="uid://c2mb4ak733yfr" path="res://themes/icons/textures/new/ButtonUnpressedTexture.tres" id="2_m4l3j"]
+[ext_resource type="StyleBox" uid="uid://cjl46deldevmn" path="res://themes/icons/textures/new/ButtonPressedTexture.tres" id="3_c2fhk"]
+[ext_resource type="Texture2D" uid="uid://52847fdjyyjg" path="res://themes/icons/images/check_square_grey_checkmark.png" id="4_brpp5"]
+[ext_resource type="Texture2D" uid="uid://bhc8udrro7qpd" path="res://themes/icons/images/check_round_grey_circle.png" id="5_xuvwr"]
+[ext_resource type="Texture2D" uid="uid://dhrcau71wpird" path="res://themes/icons/images/check_round_grey.png" id="6_5cc18"]
+[ext_resource type="Texture2D" uid="uid://pjlpj7a21kkm" path="res://themes/icons/images/check_square_grey.png" id="7_g3k81"]
+[ext_resource type="Texture2D" uid="uid://baqxuaagvdebe" path="res://themes/icons/images/check_button_checked.png" id="8_pywmv"]
+[ext_resource type="Texture2D" uid="uid://cmiwixlg1ikuw" path="res://themes/icons/images/check_button_unchecked.png" id="9_my5g0"]
+[ext_resource type="Texture2D" uid="uid://ndcoy7082blm" path="res://themes/icons/images/icon_outline_circle.png" id="10_1cqfh"]
+[ext_resource type="Texture2D" uid="uid://bg3f0rkuysljd" path="res://themes/icons/images/icon_circle.png" id="11_27j2c"]
+[ext_resource type="StyleBox" uid="uid://qokr0haq87n6" path="res://themes/icons/textures/slider_line.tres" id="12_r1vau"]
+[ext_resource type="Texture2D" uid="uid://c82swqlfyyqn0" path="res://themes/icons/images/icon_cross.png" id="13_u5wqy"]
+[ext_resource type="StyleBox" uid="uid://bjfuo1ayrlntf" path="res://themes/icons/textures/line_edit.tres" id="14_4370r"]
+[ext_resource type="Texture2D" uid="uid://br7eedn7ojcp2" path="res://themes/icons/new/menu_pressed_without_bottom.png" id="15_3ej78"]
+[ext_resource type="Texture2D" uid="uid://f58fynmul3pk" path="res://themes/icons/images/button_square_depth_flat.png" id="16_jxxx4"]
+[ext_resource type="Texture2D" uid="uid://yw4f6fpgja7m" path="res://themes/icons/new/button_without_top.png" id="17_evqbf"]
+[ext_resource type="Texture2D" uid="uid://bkclodln2u8jr" path="res://themes/icons/images/divider_edges.png" id="18_x3q1d"]
+[ext_resource type="StyleBox" uid="uid://cglre61f6cp6f" path="res://themes/icons/textures/tab_background_texture.tres" id="19_meoqw"]
+[ext_resource type="StyleBox" uid="uid://cyva1v4us87vc" path="res://themes/icons/textures/tab_texture.tres" id="20_5arae"]
+[ext_resource type="FontFile" uid="uid://d0clm05x4hgq" path="res://themes/fonts/Kenney Future.ttf" id="21_67rhh"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iayfm"]
 
@@ -36,7 +36,7 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wuhp0"]
 
-[sub_resource type="Image" id="Image_q1hrm"]
+[sub_resource type="Image" id="Image_bc64o"]
 data = {
 "data": PackedByteArray(255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 9, 255, 255, 255, 49, 255, 255, 255, 77, 255, 255, 255, 90, 255, 255, 255, 90, 255, 255, 255, 77, 255, 255, 255, 49, 255, 255, 255, 9, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 32, 255, 255, 255, 90, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 90, 255, 255, 255, 31, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 32, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 31, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 9, 255, 255, 255, 90, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 89, 255, 255, 255, 8, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 49, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 48, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 77, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 77, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 90, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 90, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 90, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 89, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 77, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 76, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 49, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 48, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 9, 255, 255, 255, 90, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 89, 255, 255, 255, 8, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 31, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 30, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 31, 255, 255, 255, 89, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 94, 255, 255, 255, 89, 255, 255, 255, 30, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 8, 255, 255, 255, 48, 255, 255, 255, 77, 255, 255, 255, 90, 255, 255, 255, 89, 255, 255, 255, 76, 255, 255, 255, 48, 255, 255, 255, 8, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 0),
 "format": "RGBA8",
@@ -46,9 +46,9 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_0gjqc"]
-image = SubResource("Image_q1hrm")
+image = SubResource("Image_bc64o")
 
-[sub_resource type="Image" id="Image_h3vg2"]
+[sub_resource type="Image" id="Image_rekv2"]
 data = {
 "data": PackedByteArray(255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 64, 255, 255, 255, 64, 255, 255, 255, 0),
 "format": "RGBA8",
@@ -58,28 +58,28 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_r25yb"]
-image = SubResource("Image_h3vg2")
+image = SubResource("Image_rekv2")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mgf5f"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_o1q7x"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_noqwq"]
-texture = ExtResource("16_2avag")
+texture = ExtResource("15_3ej78")
 texture_margin_left = 14.0
 texture_margin_top = 22.0
 texture_margin_right = 14.0
 texture_margin_bottom = 14.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8fapq"]
-texture = ExtResource("16_46edn")
+texture = ExtResource("16_jxxx4")
 texture_margin_left = 14.0
 texture_margin_top = 14.0
 texture_margin_right = 14.0
 texture_margin_bottom = 22.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rqmmm"]
-texture = ExtResource("16_46edn")
+texture = ExtResource("16_jxxx4")
 texture_margin_left = 14.0
 texture_margin_top = 14.0
 texture_margin_right = 14.0
@@ -94,13 +94,13 @@ texture_margin_bottom = 22.0
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0alem"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4qlcs"]
-texture = ExtResource("18_nssvn")
+texture = ExtResource("17_evqbf")
 texture_margin_left = 14.0
 texture_margin_right = 14.0
 texture_margin_bottom = 14.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p21ba"]
-texture = ExtResource("18_v1tng")
+texture = ExtResource("18_x3q1d")
 texture_margin_left = 4.0
 texture_margin_top = 4.0
 texture_margin_right = 4.0
@@ -109,64 +109,55 @@ texture_margin_bottom = 4.0
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_homjk"]
 
 [resource]
-Button/colors/font_disabled_color = Color(0.596078, 0.603922, 0.686275, 1)
+default_font = ExtResource("21_67rhh")
 Button/colors/font_focus_color = Color(0.87451, 0.87451, 0.87451, 1)
 Button/colors/font_hover_color = Color(0.87451, 0.87451, 0.87451, 1)
 Button/colors/font_pressed_color = Color(0.87451, 0.87451, 0.87451, 1)
-Button/fonts/font = ExtResource("1_qglab")
-Button/styles/disabled = ExtResource("2_fy4cg")
+Button/styles/disabled = ExtResource("1_siy7r")
 Button/styles/focus = SubResource("StyleBoxEmpty_iayfm")
-Button/styles/hover = ExtResource("2_o4ysf")
-Button/styles/normal = ExtResource("2_o4ysf")
-Button/styles/pressed = ExtResource("3_u0sir")
+Button/styles/hover = ExtResource("2_m4l3j")
+Button/styles/normal = ExtResource("2_m4l3j")
+Button/styles/pressed = ExtResource("3_c2fhk")
 CheckBox/colors/font_color = Color(0.596078, 0.603922, 0.686275, 1)
 CheckBox/constants/icon_max_width = 32
-CheckBox/fonts/font = ExtResource("1_qglab")
-CheckBox/icons/checked = ExtResource("1_rghrs")
-CheckBox/icons/radio_checked = ExtResource("2_a2j4i")
-CheckBox/icons/radio_unchecked = ExtResource("3_yu3x2")
-CheckBox/icons/unchecked = ExtResource("4_fvwux")
+CheckBox/icons/checked = ExtResource("4_brpp5")
+CheckBox/icons/radio_checked = ExtResource("5_xuvwr")
+CheckBox/icons/radio_unchecked = ExtResource("6_5cc18")
+CheckBox/icons/unchecked = ExtResource("7_g3k81")
 CheckBox/styles/hover = SubResource("StyleBoxEmpty_ucq4m")
 CheckBox/styles/normal = SubResource("StyleBoxEmpty_p2eo4")
 CheckBox/styles/pressed = SubResource("StyleBoxEmpty_b7jah")
 CheckButton/colors/font_color = Color(0.596078, 0.603922, 0.686275, 1)
 CheckButton/constants/align_to_largest_stylebox = 1
 CheckButton/constants/icon_max_width = 64
-CheckButton/fonts/font = ExtResource("1_qglab")
-CheckButton/icons/checked = ExtResource("9_wm81b")
-CheckButton/icons/unchecked = ExtResource("10_bs66c")
+CheckButton/icons/checked = ExtResource("8_pywmv")
+CheckButton/icons/unchecked = ExtResource("9_my5g0")
 CheckButton/styles/hover = SubResource("StyleBoxEmpty_vj0mw")
 CheckButton/styles/normal = SubResource("StyleBoxEmpty_4thep")
 CheckButton/styles/pressed = SubResource("StyleBoxEmpty_wuhp0")
 HSlider/constants/center_grabber = 0
 HSlider/constants/grabber_offset = 0
-HSlider/icons/grabber = ExtResource("6_a044o")
+HSlider/icons/grabber = ExtResource("10_1cqfh")
 HSlider/icons/grabber_disabled = SubResource("ImageTexture_0gjqc")
-HSlider/icons/grabber_highlight = ExtResource("5_bqame")
+HSlider/icons/grabber_highlight = ExtResource("11_27j2c")
 HSlider/icons/tick = SubResource("ImageTexture_r25yb")
-HSlider/styles/grabber_area = ExtResource("7_w8pw8")
-HSlider/styles/grabber_area_highlight = ExtResource("7_w8pw8")
-Label/fonts/font = ExtResource("1_qglab")
-LineEdit/fonts/font = ExtResource("1_qglab")
-LineEdit/icons/clear = ExtResource("11_wm5yf")
+HSlider/styles/grabber_area = ExtResource("12_r1vau")
+HSlider/styles/grabber_area_highlight = ExtResource("12_r1vau")
+LineEdit/icons/clear = ExtResource("13_u5wqy")
 LineEdit/styles/focus = SubResource("StyleBoxEmpty_mgf5f")
-LineEdit/styles/normal = ExtResource("12_sepmh")
-OptionButton/fonts/font = ExtResource("1_qglab")
+LineEdit/styles/normal = ExtResource("14_4370r")
 OptionButton/icons/arrow = SubResource("CompressedTexture2D_o1q7x")
 OptionButton/styles/pressed = SubResource("StyleBoxTexture_noqwq")
 Panel/styles/panel = SubResource("StyleBoxTexture_8fapq")
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_rqmmm")
-PopupMenu/fonts/font = ExtResource("1_qglab")
-PopupMenu/fonts/title_font = ExtResource("1_qglab")
 PopupMenu/icons/checked = SubResource("CompressedTexture2D_0kwqc")
 PopupMenu/icons/radio_checked = SubResource("CompressedTexture2D_krafa")
 PopupMenu/icons/radio_unchecked = SubResource("CompressedTexture2D_2p6wh")
 PopupMenu/icons/unchecked = SubResource("CompressedTexture2D_0alem")
 PopupMenu/styles/panel = SubResource("StyleBoxTexture_4qlcs")
 PopupMenu/styles/separator = SubResource("StyleBoxTexture_p21ba")
-TabContainer/fonts/font = ExtResource("1_qglab")
-TabContainer/styles/panel = ExtResource("1_6t0uu")
+TabContainer/styles/panel = ExtResource("19_meoqw")
 TabContainer/styles/tab_focus = SubResource("StyleBoxEmpty_homjk")
-TabContainer/styles/tab_hovered = ExtResource("2_db8yj")
-TabContainer/styles/tab_selected = ExtResource("2_db8yj")
-TabContainer/styles/tab_unselected = ExtResource("2_db8yj")
+TabContainer/styles/tab_hovered = ExtResource("20_5arae")
+TabContainer/styles/tab_selected = ExtResource("20_5arae")
+TabContainer/styles/tab_unselected = ExtResource("20_5arae")

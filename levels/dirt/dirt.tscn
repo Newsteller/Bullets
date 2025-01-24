@@ -5,6 +5,9 @@
 
 [node name="BaseLevel" instance=ExtResource("1_ktmrl")]
 
+[node name="Node2D" parent="." index="3"]
+script = null
+
 [node name="TileMapLayer" parent="Node2D" index="0"]
 tile_set = ExtResource("2_a354m")
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cy833eh84rbmt"]
 
-[ext_resource type="Theme" uid="uid://dp5xim38i7y6m" path="res://themes/main_theme.tres" id="1_4rahx"]
+[ext_resource type="Theme" uid="uid://dp5xim38i7y6m" path="res://themes/themes/main_theme.tres" id="1_4rahx"]
 [ext_resource type="Script" path="res://menus/components/button/base_button.gd" id="1_yso8o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5l1n5"]
