@@ -189,3 +189,7 @@ func _on_message_send_pressed() -> void:
 
 func _on_leave_pressed() -> void:
 	leave_lobby()
+
+
+func _on_back_button_pressed() -> void:
+	SceneSwitcher.replace_scene(self, "res://menus/title/title.tscn")

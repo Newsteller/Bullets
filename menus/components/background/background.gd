@@ -1,13 +1,21 @@
 extends Node2D
 
 
+const BULLET_HIT_SOUND_01 = preload("res://menus/components/background/bullet_sounds/bullet_hit_01.ogg")
+const BULLET_HIT_SOUND_02 = preload("res://menus/components/background/bullet_sounds/bullet_hit_02.ogg")
+
 const BULLET_HIT := preload("res://menus/components/background/bullet_hit/bullet_hit.tscn")
 const BULLET_HOLE = preload("res://menus/components/background/bullet_holes/bullet_hole.tscn")
-const MOVEMENT_MULTIPLIER = 0.5
 
+const MOVEMENT_MULTIPLIER = 0.5
 
 var viewport_width
 var viewport_height
+
+const bullet_sounds = [
+	BULLET_HIT_SOUND_01,
+	BULLET_HIT_SOUND_02
+]
 
 
 func _ready() -> void:
@@ -54,6 +62,13 @@ func shoot_background():
 	if Input.get_current_cursor_shape() == Input.CURSOR_ARROW:
 		add_item_at_mouse_position(BULLET_HOLE)
 		add_item_at_mouse_position(BULLET_HIT)
+		play_sound()
+		
+
+func play_sound() -> void:
+	%AudioStreamPlayer2D.stream = bullet_sounds.pick_random()
+	%AudioStreamPlayer2D.pitch_scale = randf_range(0.8, 1.0)
+	%AudioStreamPlayer2D.play()
 
 
 func add_item_at_mouse_position(item):

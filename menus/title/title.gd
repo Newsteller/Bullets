@@ -2,7 +2,7 @@ extends Control
 
 
 func _on_play_button_pressed() -> void:
-	SceneSwitcher.replace_scene(self, "res://menus/lobby/lobby.tscn")
+	SceneSwitcher.replace_scene(self, "res://menus/steam_lobby/steam_lobby.tscn")
 
 
 func _on_settings_button_pressed() -> void:
