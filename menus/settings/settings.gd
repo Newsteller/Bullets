@@ -60,4 +60,4 @@ func _on_audio_sfx_slider_drag_ended(value_changed: bool) -> void:
 
 
 func _on_back_button_pressed() -> void:
-	SceneSwitcher.change_scene(self, "res://menus/title/title.tscn")
+	SceneSwitcher.replace_scene(self, "res://menus/title/title.tscn")

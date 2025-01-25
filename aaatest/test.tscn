@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://ckqhc5xp3bsd2"]
+[gd_scene load_steps=2 format=3 uid="uid://di4nhxkjoumwe"]
 
-[ext_resource type="Script" path="res://aaatest/test.gd" id="1_wkk50"]
+[sub_resource type="GDScript" id="GDScript_gbkax"]
+script/source = "extends Node2D
+
+draw_line()
+"
 
 [node name="Test" type="Node2D"]
-script = ExtResource("1_wkk50")
+script = SubResource("GDScript_gbkax")

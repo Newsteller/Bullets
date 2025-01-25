@@ -9,7 +9,7 @@ func _ready() -> void:
 	current_scene = root.get_child(-1)
 
 
-func change_scene(scene_from, scene_to):
+func replace_scene(scene_from, scene_to):
 	scene_from.queue_free()
 	current_scene = load(scene_to).instantiate()
 	get_tree().root.get_child(-1).add_child(current_scene)
@@ -20,7 +20,7 @@ func switch_scene(res_path):
 
 
 func _deferred_switch_scene(res_path):
-	#current_scene.free()
+	current_scene.free()
 	var s = load(res_path)
 	current_scene = s.instantiate()
 	get_tree().root.add_child(current_scene)

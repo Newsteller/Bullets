@@ -2,6 +2,7 @@ extends Node
 
 
 signal lobby_created_signal(lobby_id)
+signal lobby_joined_signal(lobby_id)
 
 
 const PACKET_READ_LIMIT := 32
@@ -45,12 +46,11 @@ func on_lobby_created(connect: int, this_lobby_id: int):
 		var set_relay := Steam.allowP2PPacketRelay(true)
 		
 		lobby_created_signal.emit(lobby_id)
-		print('Lobby created: ', lobby_id)
 
 
 func join_lobby(this_lobby_id: int):
 	Steam.joinLobby(this_lobby_id)
-	print('Lobby joined: ', this_lobby_id)
+	lobby_joined_signal.emit(this_lobby_id)
 
 
 func get_lobby_members():
@@ -77,7 +77,7 @@ func send_p2p_packet(target: int, packet_data: Dictionary, sent_type: int = 0) -
 	if target == TARGET_TYPE.EVERYONE:
 		if lobby_members.size() > 1:
 			for member in lobby_members:
-				if member["steam_id"] != SteamController.steam_id:
+				#if member["steam_id"] != SteamController.steam_id:
 					Steam.sendP2PPacket(member['steam_id'], data, sent_type, channel)
 	else:
 		Steam.sendP2PPacket(target, data, sent_type, channel)
@@ -109,7 +109,8 @@ func read_all_p2p_packets(read_count: int = 0):
 
 
 func make_p2p_handshake():
-	send_p2p_packet(0, {"message": "handshake", "steam_id": SteamController.user_id, "username": SteamController.user_name})
+	#send_p2p_packet(0, {"message": "handshake", "steam_id": SteamController.user_id, "username": SteamController.user_name})
+	pass
 
 
 func _on_lobby_joined(this_lobby_id: int, _permissions: int, _locked: bool, response: int):
