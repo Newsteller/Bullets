@@ -1,0 +1,74 @@
+[gd_resource type="SpriteFrames" load_steps=11 format=3 uid="uid://dimdu4p1yj3w4"]
+
+[ext_resource type="Texture2D" uid="uid://d0ic2p1604ggr" path="res://assets/bullet_hit.png" id="1_a5k42"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1bd5d"]
+atlas = ExtResource("1_a5k42")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n0n33"]
+atlas = ExtResource("1_a5k42")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6pn3v"]
+atlas = ExtResource("1_a5k42")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ktspm"]
+atlas = ExtResource("1_a5k42")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2abno"]
+atlas = ExtResource("1_a5k42")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hfh8n"]
+atlas = ExtResource("1_a5k42")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_41yjf"]
+atlas = ExtResource("1_a5k42")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xhl4n"]
+atlas = ExtResource("1_a5k42")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dd7d6"]
+atlas = ExtResource("1_a5k42")
+region = Rect2(512, 0, 64, 64)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1bd5d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n0n33")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6pn3v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ktspm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2abno")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hfh8n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_41yjf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xhl4n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dd7d6")
+}],
+"loop": false,
+"name": &"hit",
+"speed": 30.0
+}]

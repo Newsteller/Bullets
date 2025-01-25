@@ -35,7 +35,7 @@ func set_background() -> void:
 
 func animate_background() -> void:
 	var screen_center = Vector2(get_viewport_rect().size.x/2, get_viewport_rect().size.y/2)
-	var offset = ((screen_center - mouse_position() - background_offset_position()) * MOVEMENT_MULTIPLIER) 
+	var offset = ((screen_center - get_current_mouse_position() - background_offset_position()) * MOVEMENT_MULTIPLIER) 
 
 	
 	if %Background.get_screen_position() != offset:
@@ -48,7 +48,7 @@ func background_offset_position() -> Vector2:
 	return Vector2(viewport_width, viewport_height) / 2
 
 
-func mouse_position() -> Vector2:
+func get_current_mouse_position() -> Vector2:
 	var mouse_position = get_global_mouse_position()
 	mouse_position.x = max(0, mouse_position.x)
 	mouse_position.x = min(viewport_width, mouse_position.x)

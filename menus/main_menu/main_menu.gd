@@ -7,7 +7,7 @@ func _ready() -> void:
 	add_child(TITLE.instantiate())
 
 
-func _input(event: InputEvent) -> void:
+func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("shoot"):
 		%Cursor.mouse_pressed()
 		%Background.shoot_background()

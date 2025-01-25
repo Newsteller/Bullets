@@ -1,82 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://bcjvgtkskyxtx"]
+[gd_scene load_steps=3 format=3 uid="uid://bcjvgtkskyxtx"]
 
-[ext_resource type="Texture2D" uid="uid://cqx82r0i2vepc" path="res://assets/bullet_hit.png" id="1_ndscx"]
+[ext_resource type="SpriteFrames" uid="uid://dimdu4p1yj3w4" path="res://menus/components/background/bullet_hit/bullet_hit.tres" id="1_kseue"]
 [ext_resource type="Script" path="res://menus/components/background/bullet_hit/bullet_hit.gd" id="2_u4dfg"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1bd5d"]
-atlas = ExtResource("1_ndscx")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_n0n33"]
-atlas = ExtResource("1_ndscx")
-region = Rect2(64, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6pn3v"]
-atlas = ExtResource("1_ndscx")
-region = Rect2(128, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ktspm"]
-atlas = ExtResource("1_ndscx")
-region = Rect2(192, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2abno"]
-atlas = ExtResource("1_ndscx")
-region = Rect2(256, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hfh8n"]
-atlas = ExtResource("1_ndscx")
-region = Rect2(320, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_41yjf"]
-atlas = ExtResource("1_ndscx")
-region = Rect2(384, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xhl4n"]
-atlas = ExtResource("1_ndscx")
-region = Rect2(448, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dd7d6"]
-atlas = ExtResource("1_ndscx")
-region = Rect2(512, 0, 64, 64)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_u1x8b"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1bd5d")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_n0n33")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6pn3v")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ktspm")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2abno")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hfh8n")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_41yjf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xhl4n")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dd7d6")
-}],
-"loop": false,
-"name": &"hit",
-"speed": 30.0
-}]
 
 [node name="BulletHit" type="AnimatedSprite2D"]
 scale = Vector2(3, 3)
-sprite_frames = SubResource("SpriteFrames_u1x8b")
+sprite_frames = ExtResource("1_kseue")
 animation = &"hit"
 autoplay = "hit"
 script = ExtResource("2_u4dfg")

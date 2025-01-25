@@ -1,9 +1,6 @@
 extends Control
 
 
-signal options_closed
-
-
 const WINDOW_RESOLUTIONS = {
 	'640 / 480': {'width': 640, 'height': 480},
 	'800 / 600': {'width': 800, 'height': 600},

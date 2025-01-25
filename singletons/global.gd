@@ -8,10 +8,10 @@ const INIT_RESPONSE = {
 	3: 'Steam client appears to be out of date'
 }
 
-var is_online: bool = Steam.loggedOn()
-var is_owned: bool = Steam.isSubscribed()
-var steam_id: int = Steam.getSteamID()
-var steam_username: String = Steam.getPersonaName()
+var is_online: bool
+var is_owned: bool
+var steam_id: int
+var steam_username: String
 
 
 var data
@@ -23,9 +23,10 @@ var lobby_invite_arg = false
 
 func _ready() -> void:
 	initialize_steam()
+	
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	Steam.run_callbacks()
 
 
