@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Bullets"
-run/main_scene="res://menus/steam_lobby/steam_lobby.tscn"
+run/main_scene="res://menus/main_menu/main_menu.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://icon.png"
 
