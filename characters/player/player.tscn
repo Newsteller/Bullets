@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://diisvj6a7mgt4"]
 
 [ext_resource type="Script" path="res://characters/player/player.gd" id="1_p5afc"]
-[ext_resource type="Texture2D" uid="uid://b3xg8jgc5u1sv" path="res://characters/player/player.png" id="1_xv6ce"]
-[ext_resource type="Texture2D" uid="uid://bf82q80if24an" path="res://assets/gun.png" id="3_xva5q"]
+[ext_resource type="Texture2D" uid="uid://b7pifikvta7et" path="res://characters/player/player.png" id="1_xv6ce"]
+[ext_resource type="Texture2D" uid="uid://p0007f6wx3fx" path="res://assets/gun.png" id="3_xva5q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ry2eh"]
 size = Vector2(8, 8)
@@ -19,6 +19,7 @@ properties/2/spawn = true
 properties/2/replication_mode = 1
 
 [node name="Player" type="CharacterBody2D"]
+scale = Vector2(5, 5)
 script = ExtResource("1_p5afc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

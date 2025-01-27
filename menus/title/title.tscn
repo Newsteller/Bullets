@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bjv6d4mcwurqe"]
+[gd_scene load_steps=3 format=3 uid="uid://bjv6d4mcwurqe"]
 
 [ext_resource type="Script" path="res://menus/title/title.gd" id="1_3qow2"]
 [ext_resource type="Texture2D" uid="uid://b05vuitddyrtt" path="res://menus/title/title.png" id="1_hhpip"]
-[ext_resource type="PackedScene" uid="uid://cy833eh84rbmt" path="res://menus/components/button/base_button.tscn" id="2_8fd0l"]
 
 [node name="Title" type="Control"]
 layout_mode = 3
@@ -44,16 +43,19 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="PlayButton" parent="TitleContainer/VBoxContainer" instance=ExtResource("2_8fd0l")]
+[node name="PlayButton" type="Button" parent="TitleContainer/VBoxContainer"]
 layout_mode = 2
+mouse_default_cursor_shape = 2
 text = "Play"
 
-[node name="SettingsButton" parent="TitleContainer/VBoxContainer" instance=ExtResource("2_8fd0l")]
+[node name="SettingsButton" type="Button" parent="TitleContainer/VBoxContainer"]
 layout_mode = 2
+mouse_default_cursor_shape = 2
 text = "Settings"
 
-[node name="QuitButton" parent="TitleContainer/VBoxContainer" instance=ExtResource("2_8fd0l")]
+[node name="QuitButton" type="Button" parent="TitleContainer/VBoxContainer"]
 layout_mode = 2
+mouse_default_cursor_shape = 2
 text = "Quit"
 
 [connection signal="pressed" from="TitleContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]

@@ -1,20 +1,10 @@
 extends Control
 
 
-enum search_distance {
-	close,
-	default,
-	far,
-	worldwide
-}
-
-
-const MAX_LOBBY_MEMBERS = 4
-
-
 func _ready() -> void:
-	%SteamName.text = Global.steam_username
-	%LobbySetName.text = Global.steam_username + "'s lobby"
+	%SteamName.text = SteamMain.steam_username
+	%LobbySetName.text = SteamMain.steam_username + "'s lobby"
+	update_play_button()
 	
 	Steam.lobby_created.connect(on_lobby_created)
 	Steam.lobby_joined.connect(on_lobby_joined)
@@ -26,9 +16,13 @@ func _ready() -> void:
 	check_command_line()
 
 
+func update_play_button() -> void:
+	%Start.disabled = SteamMain.lobby_id == 0
+
+
 func create_lobby() -> void:
-	if Global.lobby_id == 0:
-		Steam.createLobby(Steam.LOBBY_TYPE_PUBLIC, MAX_LOBBY_MEMBERS)
+	if SteamMain.lobby_id == 0:
+		Steam.createLobby(Steam.LOBBY_TYPE_PUBLIC, SteamMain.lobby_max_members)
 
 
 func join_lobby(lobby_id):
@@ -36,14 +30,14 @@ func join_lobby(lobby_id):
 	var name = Steam.getLobbyData(lobby_id, "name")
 	display_message("Joining lobby: " + str(name) + "...")
 	
-	Global.lobby_members.clear()
+	SteamMain.lobby_members.clear()
 	
 	Steam.joinLobby(lobby_id)
 
 
 func send_chat_message() -> void:
 	var message = %MessageText.text
-	var sent = Steam.sendLobbyChatMsg(Global.lobby_id, message)
+	var sent = Steam.sendLobbyChatMsg(SteamMain.lobby_id, message)
 	
 	if !sent:
 		display_message("Message has not been sent.")
@@ -56,21 +50,21 @@ func display_message(message: String) -> void:
 
 
 func get_lobby_members() -> void:
-	Global.lobby_members.clear()
-	var member_count = Steam.getNumLobbyMembers(Global.lobby_id)
+	SteamMain.lobby_members.clear()
+	var member_count = Steam.getNumLobbyMembers(SteamMain.lobby_id)
 	%PlayerCount.set_text("Players (" + str(member_count) + ")")
 	
 	for member in member_count:
-		var member_steam_id = Steam.getLobbyMemberByIndex(Global.lobby_id, member)
+		var member_steam_id = Steam.getLobbyMemberByIndex(SteamMain.lobby_id, member)
 		var member_steam_name = Steam.getFriendPersonaName(member_steam_id)
 		add_player_to_list(member_steam_id, member_steam_name)
 
 
 func add_player_to_list(steam_id: int, steam_name: String) -> void:
-	Global.lobby_members.append({"steam_id": steam_id, "steam_name": steam_name})
+	SteamMain.lobby_members.append({"steam_id": steam_id, "steam_name": steam_name})
 	%PlayerList.clear()
 	
-	for member in Global.lobby_members:
+	for member in SteamMain.lobby_members:
 		%PlayerList.add_text(str(member.steam_name) + "\n")
 
 
@@ -86,36 +80,39 @@ func check_command_line() -> void:
 
 
 func leave_lobby() -> void:
-	if Global.lobby_id != 0:
+	if SteamMain.lobby_id != 0:
 		display_message("Leaving lobby...")
-		Steam.leaveLobby(Global.lobby_id)
-		Global.lobby_id = 0
+		Steam.leaveLobby(SteamMain.lobby_id)
+		SteamMain.lobby_id = 0
 		
-		%LobbySetName.text = Global.steam_username + "'s lobby"
+		%LobbySetName.text = SteamMain.steam_username + "'s lobby"
 		%PlayerCount.text = "Players (0)"
 		%PlayerList.clear()
 		
-		for member in Global.lobby_members:
+		for member in SteamMain.lobby_members:
 			Steam.closeP2PSessionWithUser(member["steam_id"])
 		
-		Global.lobby_members.clear()
+		SteamMain.lobby_members.clear()
 
 
 func on_lobby_created(connect: int, this_lobby_id: int):
 	if connect == 1:
-		Global.lobby_id = this_lobby_id
+		SteamMain.lobby_id = this_lobby_id
 		display_message('Created lobby: ' + %LobbySetName.text)
 		
-		Steam.setLobbyData(Global.lobby_id, "name", %LobbySetName.text)
-		var name = Steam.getLobbyData(Global.lobby_id, "name")
+		Steam.setLobbyData(SteamMain.lobby_id, "name", %LobbySetName.text)
+		Steam.allowP2PPacketRelay(true)
+		var name = Steam.getLobbyData(SteamMain.lobby_id, "name")
 		%LobbyGetName.text = str(name)
+		update_play_button()
 
 
 func on_lobby_joined(lobby_id, permissions, locked, response) -> void:
-	Global.lobby_id = lobby_id
-	var name = Steam.getLobbyData(Global.lobby_id, "name")
+	SteamMain.lobby_id = lobby_id
+	var name = Steam.getLobbyData(SteamMain.lobby_id, "name")
 	%LobbyGetName.text = name
 	get_lobby_members()
+	update_play_button()
 
 
 func on_lobby_join_request(lobby_id, friend_id) -> void:
@@ -174,7 +171,7 @@ func _on_create_pressed() -> void:
 
 func _on_join_pressed() -> void:
 	%LobbyPopupPanel.popup()
-	Steam.addRequestLobbyListDistanceFilter(search_distance.worldwide)
+	Steam.addRequestLobbyListDistanceFilter(Steam.LOBBY_DISTANCE_FILTER_WORLDWIDE)
 	display_message("Searching for lobbies...")
 	Steam.requestLobbyList()
 
@@ -189,6 +186,10 @@ func _on_message_send_pressed() -> void:
 
 func _on_leave_pressed() -> void:
 	leave_lobby()
+
+
+func _on_start_pressed() -> void:
+	SceneSwitcher.move_to_scene("res://levels/dirt/dirt.tscn")
 
 
 func _on_back_button_pressed() -> void:

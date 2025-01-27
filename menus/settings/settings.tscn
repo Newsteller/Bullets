@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cb5o8wcppm50n"]
+[gd_scene load_steps=3 format=3 uid="uid://cb5o8wcppm50n"]
 
 [ext_resource type="Theme" uid="uid://dp5xim38i7y6m" path="res://themes/themes/main_theme.tres" id="1_cj3xe"]
 [ext_resource type="Script" path="res://menus/settings/settings.gd" id="1_qrc6b"]
-[ext_resource type="PackedScene" uid="uid://cy833eh84rbmt" path="res://menus/components/button/base_button.tscn" id="2_143aq"]
 
 [node name="Settings" type="Control"]
 layout_mode = 3
@@ -105,10 +104,9 @@ layout_mode = 2
 size_flags_horizontal = 4
 mouse_default_cursor_shape = 2
 
-[node name="BackButton" parent="VBoxContainer" instance=ExtResource("2_143aq")]
+[node name="BackButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 10
-theme_override_font_sizes/font_size = 32
+mouse_default_cursor_shape = 2
 text = "Back"
 
 [connection signal="item_selected" from="VBoxContainer/TabContainer/Video/VideoVBoxContainer/ResolutionButton" to="." method="_on_resolution_button_item_selected"]

@@ -10,20 +10,22 @@ const INIT_RESPONSE = {
 
 var is_online: bool
 var is_owned: bool
+var steam_app_id: int = 480
 var steam_id: int
 var steam_username: String
-
 
 var data
 var lobby_id = 0
 var lobby_name = 'Default name'
 var lobby_members = []
+var lobby_max_members: int = 4
 var lobby_invite_arg = false
 
 
-func _ready() -> void:
+func _init():
+	OS.set_environment("SteamAppId", str(steam_app_id))
+	OS.set_environment("SteamGameId", str(steam_app_id))
 	initialize_steam()
-	
 
 
 func _process(_delta: float) -> void:
@@ -34,7 +36,7 @@ func initialize_steam() -> void:
 	var initialize_response: Dictionary = Steam.steamInitEx()
 	print("Did Steam initialize?: %s " % INIT_RESPONSE[initialize_response.status])
 	
-	if initialize_response['status'] > 0:
+	if initialize_response.status > 0:
 		print('Exiting the game due to Steam not running')
 		get_tree().quit()
 	
