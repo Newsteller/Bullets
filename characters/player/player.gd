@@ -2,58 +2,42 @@ class_name Player
 extends CharacterBody2D
 
 
-const SPEED = 100.0
-const JUMP_VELOCITY = -200.0
-const MAX_HEALTH = 100.0
-const BULLET = preload("res://bullet/bullet.tscn")
+const UP_DIRECTION: Vector2 = Vector2.UP
 
-var health = MAX_HEALTH
 
-@onready var game: GameSteam = get_parent()
+@export var move_acceleration: float = 50
+@export var move_max_speed: float = 500.0
 
-func _enter_tree() -> void:
-	set_multiplayer_authority(int(str(name)))
-	
+@export_category("Jump")
+@export var jump_strength: float = 1000.0
+@export var jump_stop_multiplier: float = 0.7
+@export var jump_coyote_time: float = 0.07
+@export var max_jumps: int = 1
+
+@export_category("Fall")
+@export var max_fall_speed: float = 1000.0
+#@export var wall_fall_speed: float = 200.0
+
+@export var gravity: float = 55.0
+@export var is_flipped: bool = false
+
+var fall_speed: float = 0.0
+
+var jumps_made_counter: int = 0
+
+var coyote_time_timer: Timer
+var coyote_time_started = false
+
+
 func _ready() -> void:
-	if !is_multiplayer_authority():
-		$Sprite2D.modulate = Color.RED
+	setup_coyote_time_timer()
 
-func _physics_process(delta: float) -> void:
-	if !is_multiplayer_authority():
-		pass
-		
-	$GunContainer.look_at(get_global_mouse_position())
-		
-	$GunContainer/Sprite2D.flip_v = get_global_mouse_position().x < global_position.x
-	
-	if Input.is_action_just_pressed("shoot"):
-		shoot.rpc(multiplayer.get_unique_id())
-		
-	if not is_on_floor():
-		velocity += get_gravity() * delta
 
-	if Input.is_action_just_pressed("jump") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+func setup_coyote_time_timer() -> void:
+	coyote_time_timer = Timer.new()
+	coyote_time_timer.one_shot = true
+	add_child(coyote_time_timer)
 
-	var direction := Input.get_axis("move_left", "move_right")
-	if direction:
-		velocity.x = direction * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
 
-	move_and_slide()
-
-@rpc("call_local")
-func shoot(shooter_pid):
-	var bullet = BULLET.instantiate()
-	bullet.set_multiplayer_authority(shooter_pid)
-	get_parent().add_child(bullet)
-	bullet.transform = $GunContainer/Sprite2D/Muzzle.global_transform
-
-@rpc("any_peer")
-func take_damage(amount):
-	health -= amount
-	
-	if health <= 0:
-		health = MAX_HEALTH
-		global_position = game.get_random_spawnpoint()
+# Leftover after multiplayer integration
+var do_jump = false

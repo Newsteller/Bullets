@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ExampleBulletStrategy" load_steps=3 format=3 uid="uid://7ijscbvape4u"]
+
+[ext_resource type="Script" path="res://base_bullet_strategy/bullet_strategies/example_bullet_strategy.gd" id="1_6fynb"]
+[ext_resource type="Texture2D" uid="uid://ds2wqigcrclex" path="res://base_bullet_strategy/bullet.png" id="2_1nj23"]
+
+[resource]
+script = ExtResource("1_6fynb")
+texture = ExtResource("2_1nj23")
+upgrade_text = "Example upgrade"

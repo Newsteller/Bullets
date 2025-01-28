@@ -1,42 +1,105 @@
-[gd_scene load_steps=6 format=3 uid="uid://diisvj6a7mgt4"]
+[gd_scene load_steps=13 format=3 uid="uid://te3s2h1che2d"]
 
-[ext_resource type="Script" path="res://characters/player/player.gd" id="1_p5afc"]
-[ext_resource type="Texture2D" uid="uid://b7pifikvta7et" path="res://characters/player/player.png" id="1_xv6ce"]
-[ext_resource type="Texture2D" uid="uid://p0007f6wx3fx" path="res://assets/gun.png" id="3_xva5q"]
+[ext_resource type="Script" path="res://characters/player/player.gd" id="1_ak3g0"]
+[ext_resource type="Script" path="res://state_machine/state_machine.gd" id="2_wx8vc"]
+[ext_resource type="Script" path="res://state_machine/movement/states/idle.gd" id="3_0lcee"]
+[ext_resource type="Script" path="res://state_machine/movement/states/running.gd" id="4_p5cln"]
+[ext_resource type="Script" path="res://state_machine/movement/states/jumping.gd" id="5_4sj0h"]
+[ext_resource type="Script" path="res://state_machine/movement/states/falling.gd" id="6_2yapx"]
+[ext_resource type="Script" path="res://state_machine/movement/states/wall_sliding.gd" id="7_r6et4"]
+[ext_resource type="Script" path="res://characters/player/input.gd" id="8_rcsfb"]
+[ext_resource type="Texture2D" uid="uid://bvws31lcjjf3a" path="res://assets/knight.png" id="9_uo7bq"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ry2eh"]
-size = Vector2(8, 8)
-
-[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_tde8h"]
-properties/0/path = NodePath(".:position")
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_bcfu3"]
+properties/0/path = NodePath(".:player_id")
 properties/0/spawn = true
 properties/0/replication_mode = 1
-properties/1/path = NodePath("GunContainer:rotation")
+properties/1/path = NodePath(".:position")
 properties/1/spawn = true
 properties/1/replication_mode = 1
-properties/2/path = NodePath("GunContainer/Sprite2D:flip_v")
+properties/2/path = NodePath(".:do_jump")
 properties/2/spawn = true
 properties/2/replication_mode = 1
+properties/3/path = NodePath(".:_is_on_floor")
+properties/3/spawn = true
+properties/3/replication_mode = 1
+properties/4/path = NodePath(".:direction")
+properties/4/spawn = true
+properties/4/replication_mode = 1
+properties/5/path = NodePath(".:username")
+properties/5/spawn = true
+properties/5/replication_mode = 1
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_kgm8b"]
+properties/0/path = NodePath("InputSynchronizer:input_direction")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+properties/1/path = NodePath("InputSynchronizer:username")
+properties/1/spawn = true
+properties/1/replication_mode = 1
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_72js6"]
+radius = 6.0
+height = 18.0
 
 [node name="Player" type="CharacterBody2D"]
-scale = Vector2(5, 5)
-script = ExtResource("1_p5afc")
+collision_layer = 2
+collision_mask = 13
+script = ExtResource("1_ak3g0")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Movement" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+script = ExtResource("2_wx8vc")
+initial_state = NodePath("IdleState")
+
+[node name="IdleState" type="Node" parent="Movement"]
+script = ExtResource("3_0lcee")
+
+[node name="RunningState" type="Node" parent="Movement"]
+script = ExtResource("4_p5cln")
+
+[node name="JumpingState" type="Node" parent="Movement"]
+script = ExtResource("5_4sj0h")
+
+[node name="FallingState" type="Node" parent="Movement"]
+script = ExtResource("6_2yapx")
+
+[node name="WallSlidingState" type="Node" parent="Movement"]
+script = ExtResource("7_r6et4")
+
+[node name="PlayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_bcfu3")
+
+[node name="InputSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_kgm8b")
+script = ExtResource("8_rcsfb")
+
+[node name="CharacterSprite" type="Sprite2D" parent="."]
 unique_name_in_owner = true
-texture = ExtResource("1_xv6ce")
+position = Vector2(-1.35525e-20, -9.53674e-07)
+texture = ExtResource("9_uo7bq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_ry2eh")
+unique_name_in_owner = true
+shape = SubResource("CapsuleShape2D_72js6")
 
-[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
-replication_config = SubResource("SceneReplicationConfig_tde8h")
+[node name="WallDetector" type="RayCast2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(6, 0)
+target_position = Vector2(1, 0)
 
-[node name="GunContainer" type="Node2D" parent="."]
+[node name="RespawnTimer" type="Timer" parent="."]
+wait_time = 0.6
+one_shot = true
 
-[node name="Sprite2D" type="Sprite2D" parent="GunContainer"]
-position = Vector2(11, 0)
-texture = ExtResource("3_xva5q")
+[node name="Username" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -42.0
+offset_right = 1.0
+offset_bottom = -19.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
 
-[node name="Muzzle" type="Marker2D" parent="GunContainer/Sprite2D"]
-position = Vector2(3, 0)
+[connection signal="timeout" from="RespawnTimer" to="." method="_respawn"]

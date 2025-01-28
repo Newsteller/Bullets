@@ -1,7 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://bjv6d4mcwurqe"]
+[gd_scene load_steps=5 format=3 uid="uid://bjv6d4mcwurqe"]
 
 [ext_resource type="Script" path="res://menus/title/title.gd" id="1_3qow2"]
 [ext_resource type="Texture2D" uid="uid://b05vuitddyrtt" path="res://menus/title/title.png" id="1_hhpip"]
+[ext_resource type="Shader" path="res://menus/title/highlight_shader.gdshader" id="3_gujkg"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d2pb8"]
+shader = ExtResource("3_gujkg")
+shader_parameter/Line_Smoothness = 0.045
+shader_parameter/Line_Width = 0.09
+shader_parameter/Brightness = 3.0
+shader_parameter/Rotation_deg = 7.0
+shader_parameter/Distortion = 1.8
+shader_parameter/Speed = 0.4
+shader_parameter/Position = 0.0
+shader_parameter/Position_Min = 0.25
+shader_parameter/Position_Max = 0.5
+shader_parameter/Alpha = 0.75
 
 [node name="Title" type="Control"]
 layout_mode = 3
@@ -16,20 +30,17 @@ script = ExtResource("1_3qow2")
 
 [node name="TitleContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -375.0
-offset_top = -187.5
-offset_right = 375.0
-offset_bottom = 187.5
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
+metadata/_edit_use_anchors_ = true
 
-[node name="TextureRect" type="TextureRect" parent="TitleContainer"]
+[node name="BulletsImage" type="TextureRect" parent="TitleContainer"]
+unique_name_in_owner = true
+clip_children = 2
 texture_filter = 2
 custom_minimum_size = Vector2(750, 0)
 layout_mode = 2
@@ -37,6 +48,17 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("1_hhpip")
 expand_mode = 5
+stretch_mode = 5
+
+[node name="TextureHighlightShader" type="ColorRect" parent="TitleContainer/BulletsImage"]
+material = SubResource("ShaderMaterial_d2pb8")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(375, 88)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TitleContainer"]
 layout_mode = 2
