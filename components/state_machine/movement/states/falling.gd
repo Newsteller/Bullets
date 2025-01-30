@@ -3,7 +3,7 @@ extends MovementState
 
 
 func enter(previous_state_path: String, data := {}) -> void:
-	print("falling")
+	print_state("falling")
 	player.fall_speed = player.max_fall_speed
 	#player.animation_player.play("fall")
 
@@ -12,6 +12,10 @@ func physics_update(delta: float) -> void:
 	calculate_gravity()
 
 	player.move_and_slide()
+	
+	
+	if player.wall_detector.is_colliding() and player.horizontal_direction != 0.0:
+		finished.emit(WALL_SLIDING)
 	
 	if not player.coyote_time_started:
 		player.coyote_time_started = true
@@ -24,7 +28,7 @@ func physics_update(delta: float) -> void:
 	else:
 		player.coyote_time_started = false
 		player.coyote_time_timer.stop()
-		if is_equal_approx(player.velocity.x, 0.0):
+		if is_zero_approx(player.velocity.x):
 			finished.emit(IDLE)
 		else:
 			finished.emit(RUNNING)

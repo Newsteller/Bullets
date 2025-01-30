@@ -7,9 +7,6 @@
 
 [node name="BaseLevel" instance=ExtResource("1_ktmrl")]
 
-[node name="MultiplayerSpawner" parent="." index="1"]
-_spawnable_scenes = PackedStringArray()
-
 [node name="TileMapLayer" parent="Environment" index="0"]
 position = Vector2(513, 481)
 scale = Vector2(1.8, 1.8)
@@ -35,7 +32,9 @@ grow_vertical = 2
 text = "Test"
 
 [node name="MultiplayerPlayer" parent="." index="6" instance=ExtResource("4_pirdg")]
-position = Vector2(201, 513)
+position = Vector2(513, 437)
 scale = Vector2(2.5, 2.5)
+debug = false
+jump_strength = 800.0
 
 [connection signal="pressed" from="DirtLevel/Button" to="DirtLevel" method="_on_button_pressed"]

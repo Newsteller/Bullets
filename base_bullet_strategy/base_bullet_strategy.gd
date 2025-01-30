@@ -9,5 +9,5 @@ extends Resource
 func apply_upgrade(bullet: Bullet) -> void:
 	pass
 
-func apply_to_hit(player: MultiplayerPlayer):
+func apply_to_hit(player: Player):
 	pass

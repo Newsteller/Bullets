@@ -1,0 +1,143 @@
+[gd_scene load_steps=5 format=3 uid="uid://yh8387dle8nq"]
+
+[ext_resource type="Script" path="res://characters/player/legs.gd" id="1_pymm5"]
+[ext_resource type="SkeletonModification2DCCDIK" uid="uid://c0eux8cwcclpp" path="res://characters/player/left.tres" id="2_cny1b"]
+[ext_resource type="SkeletonModification2DCCDIK" uid="uid://c2g7bwsfo2ufw" path="res://characters/player/right.tres" id="3_26nwc"]
+
+[sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_5jomf"]
+enabled = true
+modification_count = 2
+modifications/0 = ExtResource("2_cny1b")
+modifications/1 = ExtResource("3_26nwc")
+
+[node name="Legs" type="Node2D"]
+script = ExtResource("1_pymm5")
+
+[node name="GroundDetector" type="RayCast2D" parent="."]
+unique_name_in_owner = true
+target_position = Vector2(0, 15)
+
+[node name="ColorRect4" type="ColorRect" parent="GroundDetector"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1.0
+offset_top = 14.0
+offset_right = 1.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0, 0, 1)
+
+[node name="GroundPoints" type="Node" parent="."]
+
+[node name="LeftTarget" type="Marker2D" parent="GroundPoints"]
+unique_name_in_owner = true
+position = Vector2(-10, 20)
+
+[node name="ColorRect2" type="ColorRect" parent="GroundPoints/LeftTarget"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2.5
+offset_top = -2.5
+offset_right = 2.5
+offset_bottom = 2.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 1, 0, 1)
+
+[node name="RightTarget" type="Marker2D" parent="GroundPoints"]
+unique_name_in_owner = true
+position = Vector2(10, 20)
+
+[node name="ColorRect" type="ColorRect" parent="GroundPoints/RightTarget"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2.5
+offset_top = -2.5
+offset_right = 2.5
+offset_bottom = 2.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 0, 1)
+
+[node name="Skeleton2D" type="Skeleton2D" parent="."]
+modification_stack = SubResource("SkeletonModificationStack2D_5jomf")
+
+[node name="Miednica" type="Bone2D" parent="Skeleton2D"]
+rotation = -3.14159
+rest = Transform2D(-1, -4.44253e-06, 4.44253e-06, -1, 0, 0)
+
+[node name="KolanoLewe" type="Bone2D" parent="Skeleton2D/Miednica"]
+unique_name_in_owner = true
+position = Vector2(10, -4.44253e-05)
+rotation = -1.57079
+rest = Transform2D(2.22127e-06, -1, 1, 2.22127e-06, 10, -4.44253e-05)
+metadata/_local_pose_override_enabled_ = true
+
+[node name="ColorRect3" type="ColorRect" parent="Skeleton2D/Miednica/KolanoLewe"]
+offset_right = 2.0
+offset_bottom = 10.0
+rotation = -1.5708
+color = Color(1, 0, 1, 1)
+
+[node name="LydkaLewa" type="Bone2D" parent="Skeleton2D/Miednica/KolanoLewe"]
+position = Vector2(10, -6.68288e-05)
+rest = Transform2D(1, 0, 0, 1, 10, -6.68288e-05)
+metadata/_local_pose_override_enabled_ = true
+
+[node name="ColorRect4" type="ColorRect" parent="Skeleton2D/Miednica/KolanoLewe/LydkaLewa"]
+offset_right = 2.0
+offset_bottom = 10.0
+rotation = -1.5708
+
+[node name="StopaLewa" type="Bone2D" parent="Skeleton2D/Miednica/KolanoLewe/LydkaLewa"]
+visible = false
+position = Vector2(10.0001, -6.66385e-05)
+rotation = 1.57079
+rest = Transform2D(2.22127e-06, 1, -1, 2.22127e-06, 10.0001, -6.66385e-05)
+
+[node name="KolanoPrawe" type="Bone2D" parent="Skeleton2D/Miednica"]
+unique_name_in_owner = true
+position = Vector2(-10, 4.44253e-05)
+rotation = 1.5708
+rest = Transform2D(-4.37114e-08, 1, -1, -4.37114e-08, -10, 4.44253e-05)
+metadata/_local_pose_override_enabled_ = true
+
+[node name="ColorRect2" type="ColorRect" parent="Skeleton2D/Miednica/KolanoPrawe"]
+offset_right = 2.0
+offset_bottom = 10.0
+rotation = 1.5708
+color = Color(0, 1, 1, 1)
+
+[node name="LydkaPrawa" type="Bone2D" parent="Skeleton2D/Miednica/KolanoPrawe"]
+position = Vector2(-10, 2.14569e-06)
+rest = Transform2D(1, 0, 0, 1, -10, 2.14569e-06)
+metadata/_local_pose_override_enabled_ = true
+
+[node name="ColorRect" type="ColorRect" parent="Skeleton2D/Miednica/KolanoPrawe/LydkaPrawa"]
+offset_right = 2.0
+offset_bottom = 10.0
+rotation = 1.5708
+
+[node name="StopaPrawa" type="Bone2D" parent="Skeleton2D/Miednica/KolanoPrawe/LydkaPrawa"]
+visible = false
+position = Vector2(-10, 8.77778e-05)
+rotation = 1.5708
+rest = Transform2D(-4.37114e-08, 1, -1, -4.37114e-08, -10, 8.77778e-05)
+
+[node name="MoveFrom" type="RayCast2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-10, 0)
+
+[node name="MoveTo" type="RayCast2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(10, 0)

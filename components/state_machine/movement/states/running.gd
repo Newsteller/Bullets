@@ -1,19 +1,20 @@
-class_name IdleState
+class_name RunningState
 extends MovementState
 
+
 func enter(previous_state_path: String, data := {}) -> void:
-	print("idling")
-	player.velocity.x = 0.0
+	print_state("running")
 	player.jumps_made_counter = 0
-	#player.animation_player.play("idle")
+	#player.animation_player.play("run")
 
 func physics_update(delta: float) -> void:
-	calculate_gravity()
+	move_to_sides()
+
 	player.move_and_slide()
 
 	if not player.is_on_floor():
 		finished.emit(FALLING)
 	elif Input.is_action_just_pressed("jump"):
 		finished.emit(JUMPING)
-	elif Input.is_action_pressed("move_left") or Input.is_action_pressed("move_right"):
-		finished.emit(RUNNING)
+	elif roundf(player.velocity.x) == 0.0:
+		finished.emit(IDLE)

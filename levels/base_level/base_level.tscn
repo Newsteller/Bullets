@@ -13,7 +13,6 @@ script = ExtResource("1_qceai")
 script = ExtResource("1_s5yae")
 
 [node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
-_spawnable_scenes = PackedStringArray("res://characters/multiplayer/multiplayer_player.tscn")
 spawn_path = NodePath("..")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]

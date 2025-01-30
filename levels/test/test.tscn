@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://dcb428wx8sirl"]
+
+[ext_resource type="Script" path="res://levels/base_level/base_level.gd" id="1_bfaqa"]
+[ext_resource type="PackedScene" uid="uid://te3s2h1che2d" path="res://characters/player/player.tscn" id="2_awa6l"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_v8qgo"]
+
+[node name="Test" type="Node2D"]
+position = Vector2(2, 8)
+script = ExtResource("1_bfaqa")
+
+[node name="Player" parent="." instance=ExtResource("2_awa6l")]
+position = Vector2(540, 206)
+scale = Vector2(3, 3)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(524, 416)
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -500.0
+offset_right = 500.0
+offset_bottom = 40.0
+grow_horizontal = 2
+color = Color(0.223103, 0.223103, 0.223103, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_v8qgo")

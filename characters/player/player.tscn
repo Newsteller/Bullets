@@ -1,12 +1,13 @@
-[gd_scene load_steps=13 format=3 uid="uid://te3s2h1che2d"]
+[gd_scene load_steps=15 format=3 uid="uid://te3s2h1che2d"]
 
 [ext_resource type="Script" path="res://characters/player/player.gd" id="1_ak3g0"]
-[ext_resource type="Script" path="res://state_machine/state_machine.gd" id="2_wx8vc"]
-[ext_resource type="Script" path="res://state_machine/movement/states/idle.gd" id="3_0lcee"]
-[ext_resource type="Script" path="res://state_machine/movement/states/running.gd" id="4_p5cln"]
-[ext_resource type="Script" path="res://state_machine/movement/states/jumping.gd" id="5_4sj0h"]
-[ext_resource type="Script" path="res://state_machine/movement/states/falling.gd" id="6_2yapx"]
-[ext_resource type="Script" path="res://state_machine/movement/states/wall_sliding.gd" id="7_r6et4"]
+[ext_resource type="PackedScene" uid="uid://yh8387dle8nq" path="res://characters/player/legs.tscn" id="2_pgqpc"]
+[ext_resource type="Script" path="res://components/state_machine/state_machine.gd" id="2_s3no2"]
+[ext_resource type="Script" path="res://components/state_machine/movement/states/idle.gd" id="3_0lcee"]
+[ext_resource type="Script" path="res://components/state_machine/movement/states/running.gd" id="4_p5cln"]
+[ext_resource type="Script" path="res://components/state_machine/movement/states/jumping.gd" id="5_4sj0h"]
+[ext_resource type="Script" path="res://components/state_machine/movement/states/falling.gd" id="6_2yapx"]
+[ext_resource type="Script" path="res://components/state_machine/movement/states/wall_sliding.gd" id="7_r6et4"]
 [ext_resource type="Script" path="res://characters/player/input.gd" id="8_rcsfb"]
 [ext_resource type="Texture2D" uid="uid://bvws31lcjjf3a" path="res://assets/knight.png" id="9_uo7bq"]
 
@@ -42,14 +43,29 @@ properties/1/replication_mode = 1
 radius = 6.0
 height = 18.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0cf18"]
+size = Vector2(12, 20)
+
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 2
 collision_mask = 13
 script = ExtResource("1_ak3g0")
 
+[node name="Legs" parent="." node_paths=PackedStringArray("origin_left", "origin_right") instance=ExtResource("2_pgqpc")]
+z_index = 1
+position = Vector2(0, 6)
+origin_left = NodePath("LeftMarker")
+origin_right = NodePath("RightMarker")
+
+[node name="LeftMarker" type="Marker2D" parent="Legs"]
+position = Vector2(-4, 0)
+
+[node name="RightMarker" type="Marker2D" parent="Legs"]
+position = Vector2(4, 0)
+
 [node name="Movement" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
-script = ExtResource("2_wx8vc")
-initial_state = NodePath("IdleState")
+script = ExtResource("2_s3no2")
+initial_state = NodePath("FallingState")
 
 [node name="IdleState" type="Node" parent="Movement"]
 script = ExtResource("3_0lcee")
@@ -81,6 +97,11 @@ texture = ExtResource("9_uo7bq")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 unique_name_in_owner = true
 shape = SubResource("CapsuleShape2D_72js6")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, 10)
+shape = SubResource("RectangleShape2D_0cf18")
 
 [node name="WallDetector" type="RayCast2D" parent="."]
 unique_name_in_owner = true

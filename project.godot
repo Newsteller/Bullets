@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Bullets"
-run/main_scene="res://levels/dirt/dirt.tscn"
+run/main_scene="res://levels/test/test.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://icon.png"
 
